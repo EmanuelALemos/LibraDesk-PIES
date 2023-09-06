@@ -1,6 +1,9 @@
 # LibraDesk-PIES
 Sistema de gerenciamento de empréstimo de livros para a biblioteca pública de Quixadá
 
+## Prototipação
+
+https://www.figma.com/file/RDGRSCh5gtYOECqFjsRTgT/LibraDesk?type=design&node-id=0%3A1&mode=design&t=7zkUA7FT11PAErhU-1
 
 ## Escopo do LibraDesk
 
