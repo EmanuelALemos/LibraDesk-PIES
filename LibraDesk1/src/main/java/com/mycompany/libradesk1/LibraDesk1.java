@@ -3,6 +3,7 @@
  */
 
 package com.mycompany.libradesk1;
+import view.Controle_Acervo;
 
 /**
  *
@@ -11,6 +12,6 @@ package com.mycompany.libradesk1;
 public class LibraDesk1 {
 
     public static void main(String[] args) {
-       new New_Book().setVisible(true);
+       new Controle_Acervo().setVisible(true);
     }
 }
