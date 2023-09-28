@@ -43,7 +43,7 @@ public class Controle_Acervo extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
-        btnNovoLivro = new RoundedButton("");
+        btnNovoLivro = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
