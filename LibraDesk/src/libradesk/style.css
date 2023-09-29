@@ -1,0 +1,20 @@
+#meuBotao {
+    -fx-border-color: #000000; /* Cor da borda inferior (preta) */
+    -fx-border-width: 0 0 3 0; /* Espessura da borda inferior (2 pixels) */
+    -fx-border-color: #919191; 
+    -fx-padding: 20 20 20 20;
+}
+
+#addButton {
+    -fx-background-color: #FFDB06;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
+#spaceForFind {
+    -fx-padding: 0 0 0 24;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
