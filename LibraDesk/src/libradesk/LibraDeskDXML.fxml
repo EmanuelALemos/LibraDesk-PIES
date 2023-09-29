@@ -23,7 +23,7 @@
             </Text>
             <ImageView fitHeight="40.0" fitWidth="60.0" layoutX="36.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Downloads/Logo%20LibraDesk.png" />
+                  <Image url="@../imagens/LogoLibraDesk.png" />
                </image>
             </ImageView>
          </children>
@@ -56,7 +56,7 @@
          <graphic>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Downloads/add.png" />
+                  <Image url="@../imagens/add.png"/>
                </image>
             </ImageView>
          </graphic>
