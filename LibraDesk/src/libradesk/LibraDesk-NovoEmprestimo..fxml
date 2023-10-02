@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="992.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libradesk.NovoLivroController">
+    <stylesheets>
+        <URL value="@libradesk-novolivro.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="60.0" layoutY="55.0" text="Novo Empréstimo">
+         <font>
+            <Font name="Segoe UI Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="140.0" text="Nome">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="60.0" layoutY="174.0" prefHeight="38.0" prefWidth="400.0" promptText="Nome" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font></TextField>
+      <VBox layoutX="60.0" layoutY="210.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: #808080;" />
+      <Label layoutX="60.0" layoutY="256.0" text="CPF">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="60.0" layoutY="289.0" prefHeight="38.0" prefWidth="400.0" promptText="CPF" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font></TextField>
+      <VBox layoutX="60.0" layoutY="326.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: #808080;" />
+      <Label layoutX="538.0" layoutY="140.0" text="Data de Empréstimo">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="538.0" layoutY="174.0" prefHeight="38.0" prefWidth="400.0" promptText="Data de Empréstimo" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font></TextField>
+      <VBox layoutX="538.0" layoutY="211.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: #808080;" />
+      <Label layoutX="538.0" layoutY="257.0" text="Data de Devolução">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="538.0" layoutY="290.0" prefHeight="38.0" prefWidth="400.0" promptText="Data de Devolção" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font></TextField>
+      <VBox layoutX="538.0" layoutY="327.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: #808080;" />
+      <Button layoutX="746.0" layoutY="479.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #00ACD5; -fx-background-radius: 40;" text="confirmar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Button>
+      <Label layoutX="60.0" layoutY="369.0" text="Livro">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="60.0" layoutY="402.0" prefHeight="38.0" prefWidth="400.0" promptText="Livro" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </TextField>
+      <VBox layoutX="60.0" layoutY="439.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: #808080;" />
+
+
+   </children>
+</AnchorPane>
