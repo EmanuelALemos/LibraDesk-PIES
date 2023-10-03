@@ -19,6 +19,8 @@ public class Main extends Application{
     
     @Override
     public void start(Stage primaryStage)throws Exception{
+        
+        stage = primaryStage;
         primaryStage.setTitle("LibraDesk");
         
         Parent xmlAcervo = FXMLLoader.load(getClass().getResource("../view/Acervo.fxml"));
@@ -32,13 +34,11 @@ public class Main extends Application{
     }
     
     public static void changeScreen(String src){
-        switch (src){
-            case "acervo":
+        if(src.equals("acervo")){
                 stage.setScene(Acervo);
-                break;
-            case "novoLivro":
+        }
+        else if(src.equals("novoLivro")){
                 stage.setScene(NovoLivro);
-                break;
         }
     }
     public static void main(String[] args ) {
