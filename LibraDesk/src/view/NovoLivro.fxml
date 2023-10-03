@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="992.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libradesk.NovoLivroController">
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="992.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NovoLivroController">
     <stylesheets>
         <URL value="@libradesk-novolivro.css" />
     </stylesheets>
@@ -23,7 +23,7 @@
             <Font name="Segoe UI Bold" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="60.0" layoutY="213.0" prefHeight="38.0" prefWidth="400.0" promptText="Título" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <TextField fx:id="tituloLivro" layoutX="60.0" layoutY="213.0" prefHeight="38.0" prefWidth="400.0" promptText="Título" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font></TextField>
@@ -33,7 +33,7 @@
             <Font name="Segoe UI Bold" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="60.0" layoutY="371.0" prefHeight="38.0" prefWidth="400.0" promptText="Autor" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <TextField fx:id="autorLivro" layoutX="60.0" layoutY="371.0" prefHeight="38.0" prefWidth="400.0" promptText="Autor" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font></TextField>
@@ -43,7 +43,7 @@
             <Font name="Segoe UI Bold" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="538.0" layoutY="213.0" prefHeight="38.0" prefWidth="400.0" promptText="Localização no Acervo" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <TextField fx:id="localAcervo" layoutX="538.0" layoutY="213.0" prefHeight="38.0" prefWidth="400.0" promptText="Localização no Acervo" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font></TextField>
@@ -53,12 +53,12 @@
             <Font name="Segoe UI Bold" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="538.0" layoutY="371.0" prefHeight="38.0" prefWidth="400.0" promptText="Quantidade de Exemplares" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+      <TextField fx:id="qtdExemplares" layoutX="538.0" layoutY="371.0" prefHeight="38.0" prefWidth="400.0" promptText="Quantidade de Exemplares" style="-fx-background-color: transparent; -fx-border-color: transparent;">
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font></TextField>
       <VBox layoutX="538.0" layoutY="408.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: #808080;" />
-      <Button layoutX="746.0" layoutY="479.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #00ACD5; -fx-background-radius: 40;" text="confirmar" textFill="WHITE">
+      <Button fx:id="botaoConfirmarLivro" layoutX="746.0" layoutY="479.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #00ACD5; -fx-background-radius: 40;" text="confirmar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="25.0" />
          </font></Button>
