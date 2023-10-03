@@ -255,6 +255,7 @@ VALUES (9, 9);
 
 INSERT INTO Livros_Emprestimo (id_livro, id_emprestimo)
 VALUES (10, 10);
+<<<<<<< HEAD
 
 --10 perguntas SQL
 --1. Quantos registros existem na tabela Pessoa?
@@ -303,3 +304,5 @@ SELECT SUM(multa) AS valor_total_multas
 FROM Emprestimo
 WHERE cpf_leitor = '555.555.555-55';
 
+=======
+>>>>>>> c240c442f09d33b46497a9f78e146ae9a6c4262d

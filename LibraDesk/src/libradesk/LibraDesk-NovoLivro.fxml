@@ -27,7 +27,7 @@
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font></TextField>
-      <VBox layoutX="60.0" layoutY="249.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: black" />
+      <VBox layoutX="60.0" layoutY="249.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: #808080;" />
       <Label layoutX="60.0" layoutY="338.0" text="Autor">
          <font>
             <Font name="Segoe UI Bold" size="20.0" />
@@ -37,7 +37,7 @@
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font></TextField>
-      <VBox layoutX="60.0" layoutY="408.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: black" />
+      <VBox layoutX="60.0" layoutY="408.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: #808080;" />
       <Label layoutX="538.0" layoutY="179.0" text="Localização no Acervo">
          <font>
             <Font name="Segoe UI Bold" size="20.0" />
@@ -47,7 +47,7 @@
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font></TextField>
-      <VBox layoutX="538.0" layoutY="250.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: black" />
+      <VBox layoutX="538.0" layoutY="250.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: #808080;" />
       <Label layoutX="538.0" layoutY="338.0" text="Quantidade de Exemplares">
          <font>
             <Font name="Segoe UI Bold" size="20.0" />
@@ -57,7 +57,7 @@
          <font>
             <Font name="Segoe UI" size="15.0" />
          </font></TextField>
-      <VBox layoutX="538.0" layoutY="408.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: black" />
+      <VBox layoutX="538.0" layoutY="408.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: #808080;" />
       <Button layoutX="746.0" layoutY="479.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #00ACD5; -fx-background-radius: 40;" text="confirmar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="25.0" />
