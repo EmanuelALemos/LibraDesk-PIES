@@ -39,4 +39,15 @@ O projeto LibraDesk não incluirá:
     RNF007 - Compatibilidade: o sistema deve ser compatível com diferentes dispositivos e navegadores.
     RNF008 - Usabilidade: a interface do usuário deve ser intuitiva e de fácil utilização minimizando a curva de aprendizado.
 
+## Regras de Negócio:
+
+RN001 - Validação: Os campos obrigatórios, como nome e identificação única, devem ser validados antes de permitir o cadastro.
+RN002 - Confirmação de cadastro: Após o cadastro, os usuários devem receber uma confirmação de registro.
+RN003 - Cadastro de livros: Os campos de informações sobre os livros devem ser devidamente preenchidos para concluir o cadastro.
+RN004 - Prevenção de erros: O sistema deve impedir o cadastro de livros com informações faltantes ou inválidas.
+RN005 - Disponibilidade: Após o cadastro, os livros devem ser disponibilizados para empréstimo.
+RN006 - Automação: A data de empréstimo deve ser registrada automaticamente no sistema.
+RN007 - Confirmação de empréstimo: O usuário deve receber uma confirmação do empréstimo realizado.
+RN008 - Registro de datas: A data de devolução deve ser registrada e comparada à data esperada para cálculo de multas.
+RN009 - Calcular multa: Caso a devolução seja feita após a data esperada, o sistema deve calcular a multa corretamente.
 
