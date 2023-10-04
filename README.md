@@ -21,14 +21,15 @@ O projeto LibraDesk não incluirá:
 
 ## Requisitos Funcionais:
 
-    RF001 - Cadastrar leitor: o sistema deve permitir o cadastro de informações pessoais dos usuários, incluindo nome, email, endereço, número de telefone e identificação única (como número de matrícula ou CPF).
-    RF002 - Cadastrar livro: o sistema deve possibilitar o cadastro de informações sobre os livros, como título, autor, ISBN, editora, ano de publicação, local que se encontra dentro da biblioteca e número de exemplares disponíveis.
+    RF001 - Manter leitor: o sistema deve permitir o cadastro de informações pessoais dos leitores, incluindo nome, email, endereço, número de telefone e identificação única (como número de matrícula ou CPF), além da edição, exclusão e busca dos mesmos.
+    RF002 - Manter livro: o sistema deve possibilitar o cadastro de informações sobre os livros, como título, autor, ISBN, editora, ano de publicação, local que se encontra dentro da biblioteca e número de exemplares disponíveis, além da edição, exclusão e busca dos mesmo.
     RF003 - Realizar empréstimo: o sistema deve ter a capacidade de registrar empréstimos, associando o usuário ao livro emprestado.
     RF004 - Estipular datas: o sistema deve ser capaz de registrar a data de empréstimo e definir a data de devolução do livro. 
     RF005 - Registrar devolução: o sistema deve permitir o registro da devolução de livros na data correta.
     RF006 - Calcular multa: o sistema deve calcular automaticamente as multas por devoluções atrasadas, se aplicável.
     RF007 -  Realizar login: o sistema deve possibilitar aos bibliotecários realizarem login no sistema.
     RF008 - Manter bibliotecário: o sistema deve ser capaz de adicionar, alterar, excluir e buscar bibliotecários.
+
 
 ## Requisitos Não Funcionais:
 
