@@ -20,6 +20,7 @@ O projeto LibraDesk não incluirá:
     Integração com sistemas externos não relacionados ao gerenciamento de empréstimos e devoluções.
 
 ## Requisitos Funcionais:
+
     RF001 - Cadastrar leitor: o sistema deve permitir o cadastro de informações pessoais dos usuários, incluindo nome, email, endereço, número de telefone e identificação única (como número de matrícula ou CPF).
     RF002 - Cadastrar livro: o sistema deve possibilitar o cadastro de informações sobre os livros, como título, autor, ISBN, editora, ano de publicação, local que se encontra dentro da biblioteca e número de exemplares disponíveis.
     RF003 - Realizar empréstimo: o sistema deve ter a capacidade de registrar empréstimos, associando o usuário ao livro emprestado.
@@ -30,14 +31,13 @@ O projeto LibraDesk não incluirá:
     RF008 - Manter bibliotecário: o sistema deve ser capaz de adicionar, alterar, excluir e buscar bibliotecários.
 
 ## Requisitos Não Funcionais:
-    RNF001 - Escalabilidade: o sistema deve ser responsivo, mesmo durante períodos de pico de uso.
-    RNF002 - Desempenho: as operações, como empréstimos, devoluções e consultas, devem ser concluídas em um tempo razoável.	
-    RNF003 - Disponibilidade: o sistema deve estar disponível para os usuários durante a maior parte do tempo e estabelecer um tempo máximo de inatividade planejada para manutenções e atualizações.
-    RNF004 - Segurança: o sistema deve proteger os dados pessoais e informações sensíveis dos usuários e implementar autenticação robusta para acessar o sistema de administração.
-    RNF005 - Confiabilidade: o sistema deve minimizar a possibilidade de falhas e ter mecanismos de backup e recuperação de dados em caso de falhas.
-    RNF006 - Manutenibilidade: o sistema deve ser de fácil manutenção e atualização.
-    RNF007 - Compatibilidade: o sistema deve ser compatível com diferentes dispositivos e navegadores.
-    RNF008 - Usabilidade: a interface do usuário deve ser intuitiva e de fácil utilização minimizando a curva de aprendizado.
+
+    RNF001 - Segurança: Implementar autenticação robusta para acessar o sistema de administração.
+    RNF002 - Privacidade: o sistema deve proteger os dados pessoais e informações sensíveis dos usuários.
+    RNF003 - Confiabilidade: o sistema deve minimizar a possibilidade de falhas e ter mecanismos de backup e recuperação de dados em caso de falhas.
+    RNF004 - Manutenibilidade: o sistema deve ser de fácil manutenção e atualização.
+    RNF005 - Usabilidade: a interface do usuário deve ser intuitiva e de fácil utilização minimizando a curva de aprendizado.
+
 
 ## Regras de Negócio:
 
