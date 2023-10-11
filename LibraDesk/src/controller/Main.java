@@ -19,6 +19,7 @@ public class Main extends Application{
     
     @Override
     public void start(Stage primaryStage)throws Exception{
+        stage = primaryStage;
         primaryStage.setTitle("LibraDesk");
         
         Parent xmlAcervo = FXMLLoader.load(getClass().getResource("../view/Acervo.fxml"));
