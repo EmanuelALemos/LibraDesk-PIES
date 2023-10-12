@@ -50,7 +50,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox alignment="TOP_CENTER" layoutX="81.0" layoutY="127.0" prefHeight="75.0" prefWidth="1280.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="160.0">
+      <HBox alignment="TOP_CENTER" layoutX="81.0" layoutY="127.0" prefHeight="50.0" prefWidth="1280.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="160.0">
          <children>
             <Button id="meuBotao" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #ffffff; -fx-border-color:  #00ACD5; " stylesheets="@style.css" text="Acervo" textFill="#00acd5" HBox.hgrow="ALWAYS">
                <font>
@@ -74,9 +74,9 @@
             </Button>
          </children>
       </HBox>
-      <HBox layoutX="40.0" layoutY="222.0" prefHeight="47.0" prefWidth="1200.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="260.0">
+      <HBox layoutX="40.0" layoutY="222.0" prefHeight="40.0" prefWidth="1200.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="260.0">
          <children>
-            <Pane prefHeight="100.0" prefWidth="754.0" HBox.hgrow="ALWAYS">
+            <Pane prefHeight="40.0" prefWidth="934.0" HBox.hgrow="ALWAYS">
                <children>
                   <TextField id="spaceForFind" prefHeight="40.0" prefWidth="320.0" promptText="pesquise por um livro" style="-fx-background-color: #ededed; -fx-border-radius: 24px;">
                      <font>
@@ -112,11 +112,13 @@
          <children>
             <TableView prefHeight="340.0" prefWidth="1235.0" style="-fx-background-color: #FFFFFF;">
               <columns>
-                <TableColumn prefWidth="116.0" style="-fx-background-color: #FFFFFF" text="Nº" />
-                <TableColumn prefWidth="128.7999725341797" style="-fx-background-color: #FFFFFF" text="Status" />
-                  <TableColumn prefWidth="433.60003662109375" style="-fx-background-color: #FFFFFF;" text="Nome" />
-                  <TableColumn prefWidth="356.800048828125" style="-fx-background-color: #FFFFFF" text="Autor" />
-                  <TableColumn minWidth="0.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF" text="Local" />
+                <TableColumn prefWidth="93.59997177124023" style="-fx-background-color: #FFFFFF" text="Nº" />
+                <TableColumn prefWidth="93.60003662109375" style="-fx-background-color: #FFFFFF" text="Status" />
+                  <TableColumn prefWidth="294.40003967285156" style="-fx-background-color: #FFFFFF;" text="Nome" />
+                  <TableColumn minWidth="0.0" prefWidth="236.79998779296875" style="-fx-background-color: #FFFFFF" text="Autor" />
+                  <TableColumn prefWidth="197.60003662109375" style="-fx-background-color: #FFFFFF" text="Editora" />
+                  <TableColumn minWidth="0.0" prefWidth="137.5999755859375" style="-fx-background-color: #FFFFFF" text="Local" />
+                  <TableColumn prefWidth="180.7999267578125" style="-fx-background-color: #FFFFFF" text="ISBN" />
               </columns>
             </TableView>
          </children>

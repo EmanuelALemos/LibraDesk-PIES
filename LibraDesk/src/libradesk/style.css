@@ -12,6 +12,13 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
 }
 
+#addButton:pressed {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
 #addButton:hover {
     -fx-background-color: #FFFFFF;
     -fx-background-radius: 24;
