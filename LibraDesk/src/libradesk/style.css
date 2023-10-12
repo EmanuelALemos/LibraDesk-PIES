@@ -1,9 +1,38 @@
-#meuBotao {
-    -fx-border-color: #000000; /* Cor da borda inferior (preta) */
+#menuButton {
+    -fx-background-color: #00ACD5; 
+    -fx-border-color: #00ACD5;
+    -fx-text-fill: #ffffff;
+}
+
+#menuButton:hover {
+    -fx-background-color: #00ACD5; 
+    -fx-border-color: #00ACD5;
+    -fx-text-fill: #dbdbdb;
+}
+
+#meuBotaoClick {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #00ACD5;
+    -fx-border-color: #00ACD5;
     -fx-border-width: 0 0 3 0; /* Espessura da borda inferior (2 pixels) */
     -fx-padding: 20 20 20 20;
 }
 
+#meuBotao {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #dfdfdf;
+    -fx-border-color: #dfdfdf;
+    -fx-border-width: 0 0 3 0; /* Espessura da borda inferior (2 pixels) */
+    -fx-padding: 20 20 20 20;
+}
+
+#meuBotao:hover {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #c5c5c5;
+    -fx-border-color: #c5c5c5;
+    -fx-border-width: 0 0 3 0; /* Espessura da borda inferior (2 pixels) */
+    -fx-padding: 20 20 20 20;
+}
 
 #addButton {
     -fx-background-color: #FFDB06;
@@ -12,15 +41,8 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
 }
 
-#addButton:pressed {
-    -fx-background-color: #FFFFFF;
-    -fx-background-radius: 24;
-    -fx-border-radius: 24;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
-}
-
 #addButton:hover {
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: #ffce39;
     -fx-background-radius: 24;
     -fx-border-radius: 24;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);

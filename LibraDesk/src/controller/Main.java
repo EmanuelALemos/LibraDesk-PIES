@@ -24,6 +24,7 @@ public class Main extends Application{
         
         Parent xmlAcervo = FXMLLoader.load(getClass().getResource("../view/Acervo.fxml"));
         Acervo = new Scene(xmlAcervo, 1280,720);
+        Acervo.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
         
         Parent fxmlNovoLivro = FXMLLoader.load(getClass().getResource("../view/NovoLivro.fxml"));
         NovoLivro = new Scene(fxmlNovoLivro, 992,614);
