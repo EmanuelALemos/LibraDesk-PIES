@@ -1,3 +1,7 @@
+#pageTop {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
 #menuButton {
     -fx-background-color: #00ACD5; 
     -fx-border-color: #00ACD5;
@@ -10,7 +14,7 @@
     -fx-text-fill: #dbdbdb;
 }
 
-#meuBotaoClick {
+#navegationButtonClick {
     -fx-background-color: #ffffff;
     -fx-text-fill: #00ACD5;
     -fx-border-color: #00ACD5;
@@ -18,7 +22,7 @@
     -fx-padding: 20 20 20 20;
 }
 
-#meuBotao {
+#navegationButton {
     -fx-background-color: #ffffff;
     -fx-text-fill: #dfdfdf;
     -fx-border-color: #dfdfdf;
@@ -26,7 +30,7 @@
     -fx-padding: 20 20 20 20;
 }
 
-#meuBotao:hover {
+#navegationButton:hover {
     -fx-background-color: #ffffff;
     -fx-text-fill: #c5c5c5;
     -fx-border-color: #c5c5c5;

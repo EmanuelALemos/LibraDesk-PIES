@@ -16,7 +16,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LibraDeskFXController">
    <children>
-      <Pane prefHeight="120.0" prefWidth="1434.0" style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Pane id="pageTop" prefHeight="120.0" prefWidth="1434.0" style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1363.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1035.0" spacing="16.0" HBox.hgrow="ALWAYS">
@@ -59,7 +59,7 @@
       </HBox>
       <HBox alignment="TOP_CENTER" layoutX="81.0" layoutY="127.0" prefHeight="50.0" prefWidth="1280.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="160.0">
          <children>
-            <Button id="meuBotaoClick" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Acervo" HBox.hgrow="ALWAYS">
+            <Button id="navegationButtonClick" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Acervo" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
@@ -67,7 +67,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="meuBotao" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Em Atraso" HBox.hgrow="ALWAYS">
+            <Button id="navegationButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Em Atraso" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
@@ -75,7 +75,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="meuBotao" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Leitores" HBox.hgrow="ALWAYS">
+            <Button id="navegationButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Leitores" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
@@ -83,7 +83,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="meuBotao" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Empréstimo">
+            <Button id="navegationButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Empréstimo" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
