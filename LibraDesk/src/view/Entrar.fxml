@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="page" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../libradesk/styleEntrar.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" maxWidth="420.0" prefHeight="200.0" prefWidth="420.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <Pane id="caixaTranslucida" maxWidth="280.0" minWidth="280.0" prefHeight="200.0" prefWidth="280.0" style="-fx-opacity: 60%" stylesheets="@../libradesk/styleEntrar.css">
+               <children>
+                  <Pane id="caixaLogo" layoutX="-119.0" maxWidth="219.0" minWidth="134.0" prefHeight="200.0" prefWidth="140.0" stylesheets="@../libradesk/styleEntrar.css" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

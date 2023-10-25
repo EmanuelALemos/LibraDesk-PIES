@@ -1,0 +1,17 @@
+#page {
+    -fx-background-image: url('../imagens/plano-de-fundo.jpg');
+    -fx-background-size: cover;
+}
+
+#caixaTranslucida {
+    -fx-background-radius: 0 12 12 0;
+    -fx-border-radius: 0 12 12 0;
+    -fx-background-color: #FFFFFF;
+}
+
+#caixaLogo {
+    -fx-background-radius: 12 0 0 12;
+    -fx-border-radius: 12 0 0 12;
+    -fx-background-color: #00ACD5;
+}
+
