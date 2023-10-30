@@ -22,8 +22,8 @@ public class Main extends Application{
         stage = primaryStage;
         primaryStage.setTitle("LibraDesk");
         
-        Parent xmlAcervo = FXMLLoader.load(getClass().getResource("../view/Acervo.fxml"));
-        Acervo = new Scene(xmlAcervo, 1280,720);
+        Parent xmlEntrar = FXMLLoader.load(getClass().getResource("../view/Entrar.fxml"));
+        Acervo = new Scene(xmlEntrar, 1280,720);
         Acervo.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
         
         Parent fxmlNovoLivro = FXMLLoader.load(getClass().getResource("../view/NovoLivro.fxml"));

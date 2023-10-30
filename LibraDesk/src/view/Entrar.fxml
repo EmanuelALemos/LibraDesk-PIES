@@ -1,19 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<VBox id="page" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../libradesk/styleEntrar.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox id="page" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../libradesk/styleEntrar.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox alignment="CENTER" maxWidth="420.0" prefHeight="200.0" prefWidth="420.0">
+      <HBox alignment="CENTER" prefHeight="380.0" prefWidth="600.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0" />
-            <Pane id="caixaTranslucida" maxWidth="280.0" minWidth="280.0" prefHeight="200.0" prefWidth="280.0" style="-fx-opacity: 60%" stylesheets="@../libradesk/styleEntrar.css">
+            <Pane id="caixaLogo" prefHeight="200.0" prefWidth="260.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
                <children>
-                  <Pane id="caixaLogo" layoutX="-119.0" maxWidth="219.0" minWidth="134.0" prefHeight="200.0" prefWidth="140.0" stylesheets="@../libradesk/styleEntrar.css" />
-               </children>
-            </Pane>
+                  <ImageView fitHeight="400.0" fitWidth="200.0" layoutX="33.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/áreaAzul.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane id="caixaTranslucida" prefHeight="180.0" prefWidth="480.0">
+               <children>
+                  <VBox prefHeight="380.0" prefWidth="480.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="login">
+                           <VBox.margin>
+                              <Insets left="210.0" top="140.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextField id="inserirDado" prefHeight="32.0" prefWidth="320.0" promptText="login" />
+                        
+                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="senha">
+                           <VBox.margin>
+                              <Insets left="210.0" top="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextField id="inserirDado" prefHeight="32.0" prefWidth="320.0" promptText="senha" />
+                        <Button mnemonicParsing="false" text="Entrar">
+                           <VBox.margin>
+                              <Insets left="200.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        
+                     </children>
+                  </VBox>
+               </children></Pane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0">
+         <children>
+            <ImageView fitHeight="260.0" fitWidth="400.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets top="24.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../imagens/Logos%20Públicas.png" />
+               </image>
+            </ImageView>
          </children>
       </HBox>
    </children>
