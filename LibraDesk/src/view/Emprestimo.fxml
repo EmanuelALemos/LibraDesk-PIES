@@ -59,7 +59,7 @@
       </HBox>
       <HBox alignment="TOP_CENTER" layoutX="81.0" layoutY="127.0" prefHeight="50.0" prefWidth="1280.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="160.0">
          <children>
-            <Button id="navegationButtonClick" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Acervo" HBox.hgrow="ALWAYS">
+            <Button id="navegationButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Acervo" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
@@ -75,7 +75,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="navegationButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Empréstimos" HBox.hgrow="ALWAYS">
+            <Button id="navegationButtonClick" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Empréstimos" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
@@ -97,7 +97,7 @@
          <children>
             <Pane prefHeight="40.0" prefWidth="934.0" HBox.hgrow="ALWAYS">
                <children>
-                  <TextField id="spaceForFind" prefHeight="40.0" prefWidth="320.0" promptText="pesquise por um livro" style="-fx-background-color: #ededed; -fx-border-radius: 24px;">
+                  <TextField id="spaceForFind" prefHeight="40.0" prefWidth="320.0" promptText="pesquise por um empréstimo" style="-fx-background-color: #ededed; -fx-border-radius: 24px;">
                      <font>
                         <Font name="Segoe UI" size="14.0" />
                      </font>
@@ -113,7 +113,7 @@
                   </Button>
                </children>
             </Pane>
-            <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#btNovoLivro" prefHeight="40.0" prefWidth="186.0" text="novo livro" textFill="WHITE" HBox.hgrow="ALWAYS">
+            <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#btNovoLivro" prefHeight="40.0" prefWidth="209.0" text="novo empréstimo" textFill="WHITE" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -135,12 +135,11 @@
             <TableView prefHeight="340.0" prefWidth="1235.0" style="-fx-background-color: #FFFFFF;">
               <columns>
                 <TableColumn prefWidth="93.59997177124023" style="-fx-background-color: #FFFFFF" text="Nº" />
-                <TableColumn prefWidth="93.60003662109375" style="-fx-background-color: #FFFFFF" text="Status" />
-                  <TableColumn prefWidth="294.40003967285156" style="-fx-background-color: #FFFFFF;" text="Nome" />
-                  <TableColumn minWidth="0.0" prefWidth="236.79998779296875" style="-fx-background-color: #FFFFFF" text="Autor" />
-                  <TableColumn prefWidth="197.60003662109375" style="-fx-background-color: #FFFFFF" text="Editora" />
-                  <TableColumn minWidth="0.0" prefWidth="137.5999755859375" style="-fx-background-color: #FFFFFF" text="Local" />
-                  <TableColumn prefWidth="180.7999267578125" style="-fx-background-color: #FFFFFF" text="ISBN" />
+                <TableColumn prefWidth="241.60001373291016" style="-fx-background-color: #FFFFFF" text="Nome" />
+                  <TableColumn prefWidth="221.59994506835938" style="-fx-background-color: #FFFFFF;" text="CPF" />
+                  <TableColumn minWidth="0.0" prefWidth="231.20001220703125" style="-fx-background-color: #FFFFFF" text="Livro" />
+                  <TableColumn prefWidth="224.79998779296875" style="-fx-background-color: #FFFFFF" text="Data de Empréstimo" />
+                  <TableColumn minWidth="0.0" prefWidth="219.20001220703125" style="-fx-background-color: #FFFFFF" text="Data de Devolução" />
               </columns>
             </TableView>
          </children>
