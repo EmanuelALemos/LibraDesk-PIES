@@ -13,7 +13,7 @@ import javafx.fxml.Initializable;
  *
  * @author arauj
  */
-public class LibraDeskNovoLivroController implements Initializable {
+public class NovoEmprestimoController implements Initializable {
 
     /**
      * Initializes the controller class.

@@ -13,11 +13,21 @@ import javafx.fxml.FXML;
  *
  * @author CAIO
  */
-public class LibraDeskFXController{
+public class Em_AtrasoController{
     
     @FXML
-    protected void btNovoLivro(ActionEvent e){
-        Main.changeScreen("novoLivro");
+    protected void btLeitores(ActionEvent e){
+        Main.changeScreen("leitores");
+    }
+
+    @FXML
+    protected void btEmprestimos(ActionEvent e){
+        Main.changeScreen("emprestimos");
+    }
+
+    @FXML
+    protected void btAcervo(ActionEvent e){
+        Main.changeScreen("acervo");
     }
     
 }
