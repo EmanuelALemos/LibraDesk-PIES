@@ -113,7 +113,7 @@
                   </Button>
                </children>
             </Pane>
-            <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#btNovoLivro" prefHeight="40.0" prefWidth="186.0" text="novo leitor" textFill="WHITE" HBox.hgrow="ALWAYS">
+            <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="186.0" text="novo leitor" textFill="WHITE" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
