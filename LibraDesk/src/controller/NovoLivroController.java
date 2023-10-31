@@ -19,7 +19,8 @@ import model.LivroModel;
  *
  * @author arauj
  */
-public class LibraDeskNovoLivroController{
+public class NovoLivroController {
+
 
  // A conexão com o banco de dados
     

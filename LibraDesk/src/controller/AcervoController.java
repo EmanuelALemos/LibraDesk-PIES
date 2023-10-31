@@ -31,7 +31,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  *
  * @author CAIO
  */
-public class LibraDeskFXController{
+public class AcervoController{
     
     @FXML 
     private TextField txtTituloPesquisado;
@@ -39,6 +39,21 @@ public class LibraDeskFXController{
     @FXML
     protected void btNovoLivro(ActionEvent e){
         Main.changeScreen("novoLivro");
+    }
+
+     @FXML
+    protected void btLeitores(ActionEvent e){
+        Main.changeScreen("leitores");
+    }
+
+    @FXML
+    protected void btEmprestimos(ActionEvent e){
+        Main.changeScreen("emprestimos");
+    }
+
+    @FXML
+    protected void btEmAtraso(ActionEvent e){
+        Main.changeScreen("em_atraso");
     }
     
     @FXML

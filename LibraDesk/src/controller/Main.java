@@ -18,20 +18,35 @@ public class Main extends Application{
     private static Stage stage;
     
     private static Scene Acervo;
-    private static Scene NovoLivro;
+    private static Scene Leitores;
+    private static Scene Emprestimos;
+    private static Scene Em_Atraso;
     
     @Override
     public void start(Stage primaryStage)throws Exception{
         stage = primaryStage;
         primaryStage.setTitle("LibraDesk");
         
-        Parent xmlEntrar = FXMLLoader.load(getClass().getResource("../view/NovoLivro.fxml"));
-        Acervo = new Scene(xmlEntrar, 1280,720);
+        //fazendo o carregamento dos arquivos fxml
+        Parent xmlAcervo = FXMLLoader.load(getClass().getResource("../view/Acervo.fxml"));
+        Parent xmlLeitores = FXMLLoader.load(getClass().getResource("../view/Leitores.fxml"));
+        Parent xmlEmprestimos = FXMLLoader.load(getClass().getResource("../view/Emprestimo.fxml"));
+        Parent xmlEm_Atraso = FXMLLoader.load(getClass().getResource("../view/Em_Atraso.fxml"));
+
+        //criando as cenas
+        Acervo = new Scene(xmlAcervo, 1280,720);
         Acervo.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
         
-        Parent fxmlNovoLivro = FXMLLoader.load(getClass().getResource("../view/NovoLivro.fxml"));
-        NovoLivro = new Scene(fxmlNovoLivro, 992,614);
-        
+        Leitores = new Scene(xmlLeitores, 1280,720);
+        Leitores.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
+
+        Emprestimos = new Scene(xmlEmprestimos, 1280,720);
+        Emprestimos.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
+
+        Em_Atraso = new Scene(xmlEm_Atraso, 1280,720);
+        Em_Atraso.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
+
+        //definindo a cena inicial
         primaryStage.setScene(Acervo);
         primaryStage.show();
     }
@@ -41,8 +56,14 @@ public class Main extends Application{
             case "acervo":
                 stage.setScene(Acervo);
                 break;
-            case "novoLivro":
-                stage.setScene(NovoLivro);
+            case "leitores":
+                stage.setScene(Leitores);
+                break;
+            case "emprestimos":
+                stage.setScene(Emprestimos);
+                break;
+            case "em_atraso":
+                stage.setScene(Em_Atraso);
                 break;
         }
     }
