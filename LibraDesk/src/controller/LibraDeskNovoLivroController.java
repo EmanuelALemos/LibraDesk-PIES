@@ -12,6 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javax.swing.JOptionPane;
+import model.LivroModel;
 
 /**
  * FXML Controller class
@@ -35,11 +36,12 @@ public class LibraDeskNovoLivroController{
     
     @FXML
     public void BtCadastrar(ActionEvent e){
-        
-        adicionarLivro();
+        //public LivroModel(String titulo, int id, String localBiblioteca, int numeroExemplares, String autor)
+        LivroModel livro = new LivroModel(tituloLivro.getText(), 0, localizacaoLivro.getText(), Integer.parseInt(numExemplaresLivro.getText()), autorLivro.getText());
+        adicionarLivro(livro);
     }
     
-    public void adicionarLivro() {
+    public void adicionarLivro(LivroModel livro) {
         
         try {     
             Conexao conSing = Conexao.getInstancy();
@@ -47,10 +49,10 @@ public class LibraDeskNovoLivroController{
             
             String sql = "INSERT INTO Livro (titulo, local_biblioteca, num_exemplares, autor) VALUES (?, ?, ?, ?)";
             PreparedStatement preparedStatement = conexao.prepareStatement(sql);
-            preparedStatement.setString(1, tituloLivro.getText());
-            preparedStatement.setString(2, localizacaoLivro.getText());
-            preparedStatement.setInt(3, Integer.parseInt(numExemplaresLivro.getText()));
-            preparedStatement.setString(4, autorLivro.getText());
+            preparedStatement.setString(1, livro.getTitulo());
+            preparedStatement.setString(2, livro.getLocalBiblioteca());
+            preparedStatement.setInt(3, livro.getNumeroExemplares());
+            preparedStatement.setString(4, livro.getAutor());
             
             preparedStatement.executeUpdate();
             
