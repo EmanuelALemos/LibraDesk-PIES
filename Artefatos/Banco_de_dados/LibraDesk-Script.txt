@@ -44,8 +44,11 @@ CREATE TABLE Livro
   local_biblioteca VARCHAR(30) NOT NULL,
   num_exemplares INT NOT NULL,
   titulo VARCHAR(100) NOT NULL,
+  autor VARCHAR(100) NOT NULL,
   PRIMARY KEY (id)
 );
+
+SELECT * FROM Livro;
 
 CREATE TABLE Emprestimo
 (
@@ -71,3 +74,4 @@ FOREIGN KEY (id_livro)
 REFERENCES Livro(id)
 ON DELETE CASCADE
 ON UPDATE CASCADE;
+
