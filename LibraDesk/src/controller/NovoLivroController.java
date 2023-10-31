@@ -40,6 +40,7 @@ public class NovoLivroController {
         //public LivroModel(String titulo, int id, String localBiblioteca, int numeroExemplares, String autor)
         LivroModel livro = new LivroModel(tituloLivro.getText(), 0, localizacaoLivro.getText(), Integer.parseInt(numExemplaresLivro.getText()), autorLivro.getText());
         adicionarLivro(livro);
+        Main.changeScreen("acervo");
     }
     
     public void adicionarLivro(LivroModel livro) {
