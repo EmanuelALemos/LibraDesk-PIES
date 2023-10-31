@@ -21,6 +21,7 @@ public class Main extends Application{
     private static Scene Leitores;
     private static Scene Emprestimos;
     private static Scene Em_Atraso;
+    private static Scene NovoLivro;
     
     @Override
     public void start(Stage primaryStage)throws Exception{
@@ -32,6 +33,7 @@ public class Main extends Application{
         Parent xmlLeitores = FXMLLoader.load(getClass().getResource("../view/Leitores.fxml"));
         Parent xmlEmprestimos = FXMLLoader.load(getClass().getResource("../view/Emprestimo.fxml"));
         Parent xmlEm_Atraso = FXMLLoader.load(getClass().getResource("../view/Em_Atraso.fxml"));
+        Parent xmlNovoLivro = FXMLLoader.load(getClass().getResource("../view/NovoLivro.fxml"));
 
         //criando as cenas
         Acervo = new Scene(xmlAcervo, 1280,720);
@@ -45,6 +47,9 @@ public class Main extends Application{
 
         Em_Atraso = new Scene(xmlEm_Atraso, 1280,720);
         Em_Atraso.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
+
+        NovoLivro = new Scene(xmlNovoLivro, 1280,720);
+        NovoLivro.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
 
         //definindo a cena inicial
         primaryStage.setScene(Acervo);
@@ -64,6 +69,9 @@ public class Main extends Application{
                 break;
             case "em_atraso":
                 stage.setScene(Em_Atraso);
+                break;
+            case "novoLivro":
+                stage.setScene(NovoLivro);
                 break;
         }
     }
