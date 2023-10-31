@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <VBox id="page" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../libradesk/styleEntrar.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
@@ -19,43 +20,63 @@
                   <Insets />
                </HBox.margin>
                <children>
-                  <ImageView fitHeight="400.0" fitWidth="200.0" layoutX="33.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="400.0" fitWidth="200.0" layoutX="29.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagens/áreaAzul.png" />
                      </image>
                   </ImageView>
                </children></Pane>
-            <Pane id="caixaTranslucida" prefHeight="180.0" prefWidth="480.0">
+            <Pane id="caixaTranslucida" nodeOrientation="LEFT_TO_RIGHT" prefHeight="180.0" prefWidth="480.0" stylesheets="@../libradesk/styleEntrar.css">
                <children>
-                  <VBox prefHeight="380.0" prefWidth="480.0" VBox.vgrow="ALWAYS">
+                  <VBox alignment="CENTER" prefHeight="380.0" prefWidth="480.0" style="-fx-background-image: url('../imagens/Fosco2.png');">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="login">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="login">
                            <VBox.margin>
-                              <Insets left="210.0" top="140.0" />
+                              <Insets bottom="8.0" top="24.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Segoe UI Semibold" size="20.0" />
+                           </font>
                         </Text>
-                        <TextField id="inserirDado" prefHeight="32.0" prefWidth="320.0" promptText="login" />
-                        
-                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="senha">
+                        <TextField id="inserirDado" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   login" style="-fx-background-color: #FFFFFF; -fx-border-radius: 24; -fx-background-radius: 24;" stylesheets="@../libradesk/styleEntrar.css">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </TextField>
+                                     <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="senha" textAlignment="CENTER">
                            <VBox.margin>
-                              <Insets left="210.0" top="20.0" />
+                              <Insets bottom="8.0" top="24.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Segoe UI Semibold" size="20.0" />
+                           </font>
                         </Text>
-                        <TextField id="inserirDado" prefHeight="32.0" prefWidth="320.0" promptText="senha" />
-                        <Button mnemonicParsing="false" text="Entrar">
+                        <TextField id="inserirDado" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   senha">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Button id="botaoEntrar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="96.0" text="entrar" textFill="WHITE">
                            <VBox.margin>
-                              <Insets left="200.0" top="20.0" />
+                              <Insets top="24.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Segoe UI Black" size="16.0" />
+                           </font>
                         </Button>
                         
-                     </children>
+                                       </children>
                   </VBox>
-               </children></Pane>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Pane>
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0">
          <children>
-            <ImageView fitHeight="260.0" fitWidth="400.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="82.0" fitWidth="400.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
                   <Insets top="24.0" />
                </HBox.margin>
@@ -64,6 +85,9 @@
                </image>
             </ImageView>
          </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
       </HBox>
    </children>
 </VBox>
