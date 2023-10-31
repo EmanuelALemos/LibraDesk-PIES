@@ -4,11 +4,14 @@
  */
 package controller; 
 
+
+import conexaoDAO.Conexao;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.sql.Connection;
 
 public class Main extends Application{
 
@@ -22,7 +25,7 @@ public class Main extends Application{
         stage = primaryStage;
         primaryStage.setTitle("LibraDesk");
         
-        Parent xmlEntrar = FXMLLoader.load(getClass().getResource("../view/Entrar.fxml"));
+        Parent xmlEntrar = FXMLLoader.load(getClass().getResource("../view/NovoLivro.fxml"));
         Acervo = new Scene(xmlEntrar, 1280,720);
         Acervo.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
         
@@ -45,6 +48,7 @@ public class Main extends Application{
     }
     public static void main(String[] args ) {
         launch(args);
+
     }
     
 }
