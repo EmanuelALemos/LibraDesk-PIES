@@ -30,7 +30,7 @@ public class Main extends Application{
         primaryStage.setTitle("LibraDesk");
         
         //fazendo o carregamento dos arquivos fxml
-        Parent xmlLogin = FXMLLoader.load(getClass().getResource("../view/Login.fxml"));
+        Parent xmlLogin = FXMLLoader.load(getClass().getResource("../view/Entrar.fxml"));
         Parent xmlAcervo = FXMLLoader.load(getClass().getResource("../view/Acervo.fxml"));
         Parent xmlLeitores = FXMLLoader.load(getClass().getResource("../view/Leitores.fxml"));
         Parent xmlEmprestimos = FXMLLoader.load(getClass().getResource("../view/Emprestimo.fxml"));
