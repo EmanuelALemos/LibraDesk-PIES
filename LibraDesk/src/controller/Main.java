@@ -17,6 +17,7 @@ public class Main extends Application{
 
     private static Stage stage;
     
+    private static Scene Login;
     private static Scene Acervo;
     private static Scene Leitores;
     private static Scene Emprestimos;
@@ -29,6 +30,7 @@ public class Main extends Application{
         primaryStage.setTitle("LibraDesk");
         
         //fazendo o carregamento dos arquivos fxml
+        Parent xmlLogin = FXMLLoader.load(getClass().getResource("../view/Login.fxml"));
         Parent xmlAcervo = FXMLLoader.load(getClass().getResource("../view/Acervo.fxml"));
         Parent xmlLeitores = FXMLLoader.load(getClass().getResource("../view/Leitores.fxml"));
         Parent xmlEmprestimos = FXMLLoader.load(getClass().getResource("../view/Emprestimo.fxml"));
@@ -36,6 +38,9 @@ public class Main extends Application{
         Parent xmlNovoLivro = FXMLLoader.load(getClass().getResource("../view/NovoLivro.fxml"));
 
         //criando as cenas
+        Login = new Scene(xmlLogin, 1280,720);
+        Login.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
+
         Acervo = new Scene(xmlAcervo, 1280,720);
         Acervo.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
         
@@ -52,12 +57,15 @@ public class Main extends Application{
         NovoLivro.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
 
         //definindo a cena inicial
-        primaryStage.setScene(Acervo);
+        primaryStage.setScene(Login);
         primaryStage.show();
     }
     
     public static void changeScreen(String src){
         switch (src){
+            case "login":
+                stage.setScene(Login);
+                break;
             case "acervo":
                 stage.setScene(Acervo);
                 break;
