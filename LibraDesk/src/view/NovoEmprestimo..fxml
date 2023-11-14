@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="992.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NovoEmprestimoController">
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="992.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NovoEmprestimoController">
     <stylesheets>
         <URL value="@libradesk-novolivro.css" />
     </stylesheets>
@@ -48,7 +48,7 @@
             <Font name="Segoe UI" size="15.0" />
          </font></TextField>
       <VBox layoutX="538.0" layoutY="211.0" prefHeight="1.0" prefWidth="400.0" style="-fx-background-color: #808080;" />
-      <Label layoutX="538.0" layoutY="257.0" text="Data de Devolução">
+      <Label layoutX="538.0" layoutY="257.0" text="Data  prevista de Devolução">
          <font>
             <Font name="Segoe UI Bold" size="20.0" />
          </font>

@@ -70,21 +70,28 @@ public class AcervoController{
     @FXML
     private TableColumn<LivroModel, Integer> idColuna;
     
+    List<LivroModel> livros;
     
     @FXML
     protected void btBuscarLivrosPorTitulo(ActionEvent event) {
         String titulo = txtTituloPesquisado.getText(); // Suponha que você tenha um campo de texto para digitar o título.
-        List<LivroModel> livros = pesquisarLivroPorTitulo(titulo);
+        livros = pesquisarLivroPorTitulo(titulo);
         preencherTableView(livros);
     }
     
+    
     @FXML
     public void initialize(URL url, ResourceBundle rb) {
-        idColuna.setCellValueFactory(new PropertyValueFactory<>("id"));
+        /*idColuna.setCellValueFactory(new PropertyValueFactory<>("id"));
         tituloColuna.setCellValueFactory(new PropertyValueFactory<>("titulo"));
         autorColuna.setCellValueFactory(new PropertyValueFactory<>("autor"));
         localizacaoColuna.setCellValueFactory(new PropertyValueFactory<>("localizacao"));
-        numExemplaresColuna.setCellValueFactory(new PropertyValueFactory<>("numExemplares"));
+        numExemplaresColuna.setCellValueFactory(new PropertyValueFactory<>("numExemplares"));*/
+        updateList();
+    }
+    
+    private void updateList(){
+        //livros.getItems().clear();
     }
     
     public void preencherTableView(List<LivroModel> livros) {
@@ -96,7 +103,7 @@ public class AcervoController{
         //JOptionPane.showMessageDialog(null, " OK! ");
         Conexao conSing = Conexao.getInstancy();
         Connection conexao = conSing.getConexao();
-        List<LivroModel> livros = new ArrayList<>();
+        List<LivroModel> listaLivros = new ArrayList<>();
         
         try{
             String sql = "SELECT * FROM Livro WHERE titulo LIKE ?";
@@ -111,14 +118,14 @@ public class AcervoController{
                 livro.setAutor(resultSet.getString("autor"));
                 livro.setLocalBiblioteca(resultSet.getString("local_biblioteca"));
                 livro.setNumeroExemplares(resultSet.getInt("num_exemplares"));
-                livros.add(livro);
+                listaLivros.add(livro);
             }
         }catch (SQLException exececaoAcervo){
              exececaoAcervo.printStackTrace();
             JOptionPane.showMessageDialog(null, "Deu errado: " + exececaoAcervo.getMessage());
         }
         
-        return livros;
+        return listaLivros;
     }
     
     
