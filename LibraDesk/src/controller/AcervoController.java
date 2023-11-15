@@ -20,6 +20,8 @@ import model.LivroModel;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
@@ -32,6 +34,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  * @author CAIO
  */
 public class AcervoController{
+    
     
     @FXML 
     private TextField txtTituloPesquisado;
@@ -59,21 +62,12 @@ public class AcervoController{
     @FXML
     private TableView<LivroModel> livrosTableView;
 
-    @FXML
-    private TableColumn<LivroModel, String> tituloColuna;
-    @FXML
-    private TableColumn<LivroModel, String> autorColuna;
-    @FXML
-    private TableColumn<LivroModel, String> localizacaoColuna;
-    @FXML
-    private TableColumn<LivroModel, Integer> numExemplaresColuna;
-    @FXML
-    private TableColumn<LivroModel, Integer> idColuna;
     
     List<LivroModel> livros;
     
     @FXML
     protected void btBuscarLivrosPorTitulo(ActionEvent event) {
+        
         String titulo = txtTituloPesquisado.getText(); // Suponha que você tenha um campo de texto para digitar o título.
         livros = pesquisarLivroPorTitulo(titulo);
         preencherTableView(livros);
@@ -81,18 +75,57 @@ public class AcervoController{
     
     
     @FXML
-    public void initialize(URL url, ResourceBundle rb) {
-        /*idColuna.setCellValueFactory(new PropertyValueFactory<>("id"));
-        tituloColuna.setCellValueFactory(new PropertyValueFactory<>("titulo"));
-        autorColuna.setCellValueFactory(new PropertyValueFactory<>("autor"));
-        localizacaoColuna.setCellValueFactory(new PropertyValueFactory<>("localizacao"));
-        numExemplaresColuna.setCellValueFactory(new PropertyValueFactory<>("numExemplares"));*/
-        updateList();
+    public void initialize() {
+        TableColumn<LivroModel, String> colTitulo = new TableColumn("Titulo");
+        colTitulo.setCellValueFactory(data-> new SimpleStringProperty(data.getValue().getTitulo()));
+        
+        TableColumn<LivroModel, String> colAutor = new TableColumn("Autor");
+        colAutor.setCellValueFactory(data-> new SimpleStringProperty(data.getValue().getAutor()));
+        
+        TableColumn<LivroModel, String> colLocalizacao = new TableColumn("Localizacao");
+        colLocalizacao.setCellValueFactory(data-> new SimpleStringProperty(data.getValue().getLocalBiblioteca()));
+        
+        TableColumn<LivroModel,Integer> colNumExemplares = new TableColumn("Numero Exemplares");
+        colNumExemplares.setCellValueFactory(data-> new SimpleIntegerProperty(data.getValue().getNumeroExemplares()).asObject() );
+        
+        TableColumn<LivroModel,Integer> colId = new TableColumn("Id");
+        colId.setCellValueFactory(data-> new SimpleIntegerProperty(data.getValue().getId()).asObject() );
+        
+        livrosTableView.getColumns().addAll(colId, colTitulo, colAutor, colLocalizacao, colNumExemplares);
+        
+        List<LivroModel> acervo = pegarLivrosAcervo();
+        preencherTableView(acervo);
     }
     
-    private void updateList(){
-        //livros.getItems().clear();
+    public List<LivroModel> pegarLivrosAcervo(){
+        //JOptionPane.showMessageDialog(null, " OK! ");
+        Conexao conSing = Conexao.getInstancy();
+        Connection conexao = conSing.getConexao();
+        List<LivroModel> listaLivros = new ArrayList<>();
+        
+        try{
+            String sql = "SELECT * FROM Livro";
+            PreparedStatement preparedStatement = conexao.prepareStatement(sql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                LivroModel livro = new LivroModel();
+                livro.setId(resultSet.getInt("id"));
+                livro.setTitulo(resultSet.getString("titulo"));
+                livro.setAutor(resultSet.getString("autor"));
+                livro.setLocalBiblioteca(resultSet.getString("local_biblioteca"));
+                livro.setNumeroExemplares(resultSet.getInt("num_exemplares"));
+                listaLivros.add(livro);
+            }
+        }catch (SQLException exececaoAcervo){
+             exececaoAcervo.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Deu errado: " + exececaoAcervo.getMessage());
+        }
+        
+        return listaLivros;
     }
+    
+
     
     public void preencherTableView(List<LivroModel> livros) {
         ObservableList<LivroModel> livrosObservableList = FXCollections.observableArrayList(livros);
