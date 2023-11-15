@@ -7,6 +7,13 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -43,7 +50,7 @@ public class LeitoresController{
 
             // Criando um novo palco (Stage) para a tela NovoLivro
             Stage novoLeitorStage = new Stage();
-            novoLeitorStage.setTitle("Novo Livro");
+            novoLeitorStage.setTitle("Novo Leitor");
             novoLeitorStage.initStyle(StageStyle.UTILITY);
             novoLeitorStage.initModality(Modality.APPLICATION_MODAL);
             novoLeitorStage.setScene(new Scene(root, 992, 614));

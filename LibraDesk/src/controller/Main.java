@@ -59,7 +59,7 @@ public class Main extends Application{
         primaryStage.show();
     }
     
-    public static void changeScreen(Scene newScene){
+    public static void changeScreen(String src){
         // stage.setScene(newScene);
         switch (src){
             case "login":
