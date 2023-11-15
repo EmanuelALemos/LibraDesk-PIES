@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AcervoController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AcervoController">
    <children>
       <Pane id="pageTop" prefHeight="120.0" prefWidth="1434.0" style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1363.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
@@ -132,15 +131,7 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="18.0" layoutY="340.0" prefHeight="340.0" prefWidth="1236.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="340.0">
          <children>
-            <TableView fx:id="livrosTableView" prefHeight="340.0" prefWidth="1235.0" style="-fx-background-color: #FFFFFF;">
-              <columns>
-                <TableColumn fx:id="idColuna" prefWidth="93.59997177124023" style="-fx-background-color: #FFFFFF" text="Nº" />
-                  <TableColumn fx:id="tituloColuna" prefWidth="294.40003967285156" style="-fx-background-color: #FFFFFF;" text="Titulo" />
-                  <TableColumn fx:id="autorColuna" minWidth="0.0" prefWidth="236.79998779296875" style="-fx-background-color: #FFFFFF" text="Autor" />
-                  <TableColumn fx:id="localColuna" prefWidth="337.60003662109375" style="-fx-background-color: #FFFFFF" text="Local" />
-                  <TableColumn fx:id="editoraColuna" minWidth="0.0" prefWidth="268.7999267578125" style="-fx-background-color: #FFFFFF" text="Editora" />
-              </columns>
-            </TableView>
+            <TableView fx:id="livrosTableView" prefHeight="340.0" prefWidth="1235.0" style="-fx-background-color: #FFFFFF;" />
          </children>
       </HBox>
    </children>
