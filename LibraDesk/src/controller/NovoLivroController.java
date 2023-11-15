@@ -42,6 +42,10 @@ public class NovoLivroController {
         adicionarLivro(livro);
         Main.changeScreen("acervo");
     }
+
+    public void btCancelar(ActionEvent e){
+        Main.changeScreen("acervo");
+    }
     
     public void adicionarLivro(LivroModel livro) {
         

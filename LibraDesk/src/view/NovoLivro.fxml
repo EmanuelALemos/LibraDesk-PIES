@@ -127,7 +127,7 @@
                <children>
                   <HBox alignment="CENTER_RIGHT" prefHeight="104.0" prefWidth="452.0" spacing="12.0">
                      <children>
-                        <Button fx:id="botaoCancelarLivro" mnemonicParsing="false" onAction="#BtCadastrar" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-background-radius: 40;" text="cancelar" textFill="WHITE">
+                        <Button fx:id="botaoCancelarLivro" mnemonicParsing="false" onAction="#btCancelar" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-background-radius: 40;" text="cancelar" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>

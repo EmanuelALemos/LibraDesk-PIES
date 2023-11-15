@@ -27,6 +27,8 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -41,7 +43,8 @@ public class AcervoController{
     
     @FXML
     protected void btNovoLivro(ActionEvent e){
-        Main.changeScreen("novoLivro");
+        // Main.changeScreen("novoLivro");
+        openNovoLivroPopup();
     }
 
      @FXML
@@ -57,6 +60,27 @@ public class AcervoController{
     @FXML
     protected void btEmAtraso(ActionEvent e){
         Main.changeScreen("em_atraso");
+    }
+
+    private static void openNovoLivroPopup() {
+        try {
+            // Carregando o arquivo FXML da tela NovoLivro
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/NovoLivro.fxml"));
+            Parent root = loader.load();
+
+            // Criando um novo palco (Stage) para a tela NovoLivro
+            Stage novoLivroStage = new Stage();
+            novoLivroStage.setTitle("Novo Livro");
+            novoLivroStage.initStyle(StageStyle.UTILITY);
+            novoLivroStage.initModality(Modality.APPLICATION_MODAL);
+            novoLivroStage.setScene(new Scene(root, 992, 614));
+
+            // Exibindo o palco
+            novoLivroStage.showAndWait();
+        } catch (Exception e) {
+            // Tratamento de exceção (substitua por um tratamento adequado)
+            e.printStackTrace();
+        }
     }
     
     @FXML

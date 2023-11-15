@@ -29,5 +29,31 @@ public class EmprestimosController{
     protected void btEmAtraso(ActionEvent e){
         Main.changeScreen("em_atraso");
     }
+
+    @FXML
+    protected void btNovoLeitor(ActionEvent e){
+        openNovoEmprestimoPopup();
+    }
+
+    private static void openNovoEmprestimoPopup() {
+        try {
+            // Carregando o arquivo FXML da tela NovoLivro
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/NovoEmprestimo.fxml"));
+            Parent root = loader.load();
+
+            // Criando um novo palco (Stage) para a tela NovoLivro
+            Stage novoEmprestimoStage = new Stage();
+            novoEmprestimoStage.setTitle("Novo Livro");
+            novoEmprestimoStage.initStyle(StageStyle.UTILITY);
+            novoEmprestimoStage.initModality(Modality.APPLICATION_MODAL);
+            novoEmprestimoStage.setScene(new Scene(root, 992, 614));
+
+            // Exibindo o palco
+            novoEmprestimoStage.showAndWait();
+        } catch (Exception e) {
+            // Tratamento de exceção (substitua por um tratamento adequado)
+            e.printStackTrace();
+        }
+    }
     
 }

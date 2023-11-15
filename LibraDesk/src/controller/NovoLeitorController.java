@@ -23,7 +23,7 @@ import model.EmprestimoModel;
  *
  * @author arauj
  */
-public class NovoEmprestimoController{
+public class NovoLeitorController{
     
     @FXML
     private TextField nomeLeitorEmprestimo;
@@ -50,7 +50,7 @@ public class NovoEmprestimoController{
     
     
     @FXML
-    public void btCadastrarEmprestimo(ActionEvent e) {
+    public void btCadastrarLeitor(ActionEvent e) {
         // Criando um empréstimo com multa=0, dataRealDev=null e status=true
         EmprestimoModel emprestimo = new EmprestimoModel(
                 parseDate(dataEmprestimo.getText()),
@@ -63,12 +63,12 @@ public class NovoEmprestimoController{
         );
 
     
-        Main.changeScreen("emprestimos");
+        Main.changeScreen("leitores");
     }
 
 
-    public void btCancelarEmprestimo(ActionEvent e) {
-        Main.changeScreen("emprestimos");
+    public void btCancelarLeitor(ActionEvent e) {
+        Main.changeScreen("leitores");
     }
     
 }
