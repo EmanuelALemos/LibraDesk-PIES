@@ -12,6 +12,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.sql.Connection;
+import javafx.stage.Modality;
+import javafx.stage.StageStyle;
 
 public class Main extends Application{
 
@@ -79,10 +81,32 @@ public class Main extends Application{
                 stage.setScene(Em_Atraso);
                 break;
             case "novoLivro":
-                stage.setScene(NovoLivro);
+                openNovoLivroPopup();
                 break;
         }
     }
+    
+    private static void openNovoLivroPopup() {
+        try {
+            // Carregando o arquivo FXML da tela NovoLivro
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/NovoLivro.fxml"));
+            Parent root = loader.load();
+
+            // Criando um novo palco (Stage) para a tela NovoLivro
+            Stage novoLivroStage = new Stage();
+            novoLivroStage.setTitle("Novo Livro");
+            novoLivroStage.initStyle(StageStyle.UTILITY);
+            novoLivroStage.initModality(Modality.APPLICATION_MODAL);
+            novoLivroStage.setScene(new Scene(root, 992, 614));
+
+            // Exibindo o palco
+            novoLivroStage.showAndWait();
+        } catch (Exception e) {
+            // Tratamento de exceção (substitua por um tratamento adequado)
+            e.printStackTrace();
+    }
+    }
+    
     public static void main(String[] args ) {
         launch(args);
 
