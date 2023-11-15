@@ -93,6 +93,36 @@ public class AcervoController{
         
         livrosTableView.getColumns().addAll(colId, colTitulo, colAutor, colLocalizacao, colNumExemplares);
         
+        List<LivroModel> acervo = pegarLivrosAcervo();
+        preencherTableView(acervo);
+    }
+    
+    public List<LivroModel> pegarLivrosAcervo(){
+        //JOptionPane.showMessageDialog(null, " OK! ");
+        Conexao conSing = Conexao.getInstancy();
+        Connection conexao = conSing.getConexao();
+        List<LivroModel> listaLivros = new ArrayList<>();
+        
+        try{
+            String sql = "SELECT * FROM Livro";
+            PreparedStatement preparedStatement = conexao.prepareStatement(sql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                LivroModel livro = new LivroModel();
+                livro.setId(resultSet.getInt("id"));
+                livro.setTitulo(resultSet.getString("titulo"));
+                livro.setAutor(resultSet.getString("autor"));
+                livro.setLocalBiblioteca(resultSet.getString("local_biblioteca"));
+                livro.setNumeroExemplares(resultSet.getInt("num_exemplares"));
+                listaLivros.add(livro);
+            }
+        }catch (SQLException exececaoAcervo){
+             exececaoAcervo.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Deu errado: " + exececaoAcervo.getMessage());
+        }
+        
+        return listaLivros;
     }
     
 
