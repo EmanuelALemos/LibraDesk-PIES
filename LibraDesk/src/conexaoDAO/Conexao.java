@@ -24,14 +24,14 @@ public class Conexao{
     private Conexao(){
         try{
             Class.forName("org.postgresql.Driver");
-            JOptionPane.showMessageDialog(null, "Driver OK!");
+            //JOptionPane.showMessageDialog(null, "Driver OK!");
         }catch(HeadlessException | ClassNotFoundException e){
             JOptionPane.showMessageDialog(null, "Driver nao encontrado");
         }
         
         try{
             this.conexao = DriverManager.getConnection(url, user, senha);
-            JOptionPane.showMessageDialog(null, "Conexão OK!");
+            //JOptionPane.showMessageDialog(null, "Conexão OK!");
         }catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
