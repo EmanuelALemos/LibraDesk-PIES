@@ -9,20 +9,18 @@ package model;
  *
  * @author gabri
  */
-public class LeitoresModel {
-    private String nome;
+public class LeitorModel {
     private String telefoneUm;
     private String telefoneDois;
     private String cpf;
     private String bairro;
     private String rua;
     private String cidade;
-    private String numero;
+    private int numero;
 
     // Construtor
-    public LeitoresModel(String nome, String telefoneUm, String telefoneDois, String cpf,
-                         String bairro, String rua, String cidade, String numero) {
-        this.nome = nome;
+    public LeitorModel(String telefoneUm, String telefoneDois, String cpf,
+                         String bairro, String rua, String cidade, int numero) {
         this.telefoneUm = telefoneUm;
         this.telefoneDois = telefoneDois;
         this.cpf = cpf;
@@ -30,12 +28,7 @@ public class LeitoresModel {
         this.rua = rua;
         this.cidade = cidade;
         this.numero = numero;
-    }
-
-    // Métodos Getter
-    public String getNome() {
-        return nome;
-    }
+    }  
 
     public String getTelefoneUm() {
         return telefoneUm;
@@ -61,13 +54,8 @@ public class LeitoresModel {
         return cidade;
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return numero;
-    }
-
-    // Métodos Setter
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public void setTelefoneUm(String telefoneUm) {
@@ -94,7 +82,7 @@ public class LeitoresModel {
         this.cidade = cidade;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 }
