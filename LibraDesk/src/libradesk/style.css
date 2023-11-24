@@ -58,3 +58,14 @@
     -fx-border-radius: 24;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
 }
+
+#campoDados {
+    -fx-background-color: #DFDFDF; 
+    -fx-border-radius: 24;
+    -fx-background-radius: 24;
+    -fx-opacity: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+    -fx-padding: 0 0 0 24;
+    -fx-height: 40px;
+    -fx-width: 700px;
+}
