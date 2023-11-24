@@ -56,9 +56,11 @@ public class NovoLeitorController{
         
         
         LeitorModel leitor = new LeitorModel(
+                primeiroNome,
+                sobrenome,
+                cpfLeitor.getText(),
                 telefone1Leitor.getText(),
                 telefone2Leitor.getText(),
-                cpfLeitor.getText(),
                 bairroLeitor.getText(),
                 ruaLeitor.getText(),
                 cidadeLeitor.getText(),

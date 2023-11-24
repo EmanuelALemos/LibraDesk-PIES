@@ -9,21 +9,20 @@ package model;
  *
  * @author gabri
  */
-public class LeitorModel {
+public class LeitorModel extends PessoaModel{
     private String telefoneUm;
     private String telefoneDois;
-    private String cpf;
     private String bairro;
     private String rua;
     private String cidade;
     private int numero;
 
     // Construtor
-    public LeitorModel(String telefoneUm, String telefoneDois, String cpf,
-                         String bairro, String rua, String cidade, int numero) {
+    public LeitorModel(String pnome, String sobrenome, String cpf, String telefoneUm, String telefoneDois,
+                       String bairro, String rua, String cidade, int numero) {
+        super(pnome, sobrenome, cpf);
         this.telefoneUm = telefoneUm;
         this.telefoneDois = telefoneDois;
-        this.cpf = cpf;
         this.bairro = bairro;
         this.rua = rua;
         this.cidade = cidade;
@@ -36,10 +35,6 @@ public class LeitorModel {
 
     public String getTelefoneDois() {
         return telefoneDois;
-    }
-
-    public String getCpf() {
-        return cpf;
     }
 
     public String getBairro() {
@@ -57,6 +52,10 @@ public class LeitorModel {
     public int getNumero() {
         return numero;
     }
+    
+    public String getEndereco(){
+        return cidade + " " + bairro + " " + rua;
+    }
 
     public void setTelefoneUm(String telefoneUm) {
         this.telefoneUm = telefoneUm;
@@ -64,10 +63,6 @@ public class LeitorModel {
 
     public void setTelefoneDois(String telefoneDois) {
         this.telefoneDois = telefoneDois;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     public void setBairro(String bairro) {
