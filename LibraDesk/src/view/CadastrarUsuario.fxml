@@ -25,14 +25,15 @@
                         <Image url="@../imagens/áreaAzul.png" />
                      </image>
                   </ImageView>
-               </children></Pane>
+               </children>
+            </Pane>
             <Pane id="caixaTranslucida" nodeOrientation="LEFT_TO_RIGHT" prefHeight="180.0" prefWidth="480.0" stylesheets="@../libradesk/styleEntrar.css">
                <children>
-                  <VBox alignment="CENTER" prefHeight="380.0" prefWidth="480.0" style="-fx-background-image: url('../imagens/Fosco2.png');">
+                  <VBox alignment="CENTER" prefHeight="380.0" prefWidth="480.0" spacing="8.0" style="-fx-background-image: url('../imagens/Fosco2.png');">
                      <children>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome">
                            <VBox.margin>
-                              <Insets top="16.0" />
+                              <Insets />
                            </VBox.margin>
                            <font>
                               <Font name="Segoe UI Semibold" size="20.0" />
@@ -43,9 +44,9 @@
                               <Font name="Segoe UI" size="12.0" />
                            </font>
                         </TextField>
-                                     <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" textAlignment="CENTER">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" textAlignment="CENTER">
                            <VBox.margin>
-                              <Insets top="8.0" />
+                              <Insets />
                            </VBox.margin>
                            <font>
                               <Font name="Segoe UI Semibold" size="20.0" />
@@ -61,7 +62,7 @@
                               <Font name="Segoe UI Semibold" size="20.0" />
                            </font>
                            <VBox.margin>
-                              <Insets top="8.0" />
+                              <Insets />
                            </VBox.margin>
                         </Text>
                         <TextField id="inserirDado" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   senha">
@@ -74,7 +75,7 @@
                               <Font name="Segoe UI Semibold" size="20.0" />
                            </font>
                            <VBox.margin>
-                              <Insets top="8.0" />
+                              <Insets />
                            </VBox.margin>
                         </Text>
                         <TextField id="inserirDado" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   senha">
@@ -82,7 +83,7 @@
                               <Font name="Segoe UI" size="12.0" />
                            </font>
                         </TextField>
-                        <HBox alignment="CENTER" maxHeight="60.0" prefHeight="100.0" prefWidth="160.0" spacing="16.0">
+                        <HBox alignment="CENTER_RIGHT" maxHeight="40.0" maxWidth="320.0" prefHeight="100.0" prefWidth="160.0" spacing="12.0">
                            <children>
                               <Button id="botaoCancelar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btEntrar" prefHeight="24.0" prefWidth="96.0" text="voltar" textFill="WHITE">
                                  <font>
@@ -93,11 +94,14 @@
                                  <font>
                                     <Font name="Segoe UI Black" size="16.0" />
                                  </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
                               </Button>
                            </children>
                         </HBox>
-                        
-                                       </children>
+
+                     </children>
                   </VBox>
                </children>
                <HBox.margin>

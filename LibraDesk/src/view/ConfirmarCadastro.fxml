@@ -9,9 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="320.0" prefWidth="560.0" styleClass="mainFxmlClass" stylesheets="@../libradesk/styleEntrar.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NovoLivroController">
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="480.0" styleClass="mainFxmlClass" stylesheets="@../libradesk/styleEntrar.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NovoLivroController">
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="8.0" layoutY="38.0" prefHeight="200.0" prefWidth="530.0" spacing="12.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <VBox alignment="CENTER" layoutX="8.0" layoutY="38.0" prefHeight="200.0" prefWidth="530.0" spacing="12.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar Cadastro">
                <font>
@@ -23,17 +23,20 @@
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="login cordenação">
                <font>
-                  <Font name="Segoe UI Semibold" size="16.0" />
+                  <Font name="Segoe UI Semilight" size="16.0" />
                </font>
             </Text>
-            <TextField id="inserirDado" maxHeight="28.0" maxWidth="320.0" minHeight="28.0" prefWidth="320.0" promptText="   login cordenação" />
+            <TextField id="inserirDado" maxHeight="28.0" maxWidth="320.0" minHeight="28.0" prefWidth="320.0" promptText="   login cordenação">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font></TextField>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="senha cordenação">
                <font>
-                  <Font name="Segoe UI Semibold" size="16.0" />
+                  <Font name="Segoe UI Semilight" size="16.0" />
                </font>
             </Text>
             <TextField id="inserirDado" maxWidth="320.0" minHeight="28.0" promptText="   senha cordenação" />
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="16.0">
+            <HBox alignment="CENTER_RIGHT" maxHeight="40.0" maxWidth="320.0" prefHeight="100.0" prefWidth="200.0" spacing="12.0">
                <children>
                   <Button id="botaoCancelar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btEntrar" prefHeight="24.0" prefWidth="96.0" text="cancelar" textFill="WHITE">
                      <font>
@@ -46,6 +49,9 @@
                      </font>
                   </Button>
                </children>
+               <padding>
+                  <Insets top="8.0" />
+               </padding>
             </HBox>
          </children>
       </VBox>

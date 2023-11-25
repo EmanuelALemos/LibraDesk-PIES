@@ -11,12 +11,21 @@
     -fx-background-color: #00ACD5;
 }
 
+#botaoNovoCadastro {
+    -fx-background-color: #FFDB06;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-width: 180px;
+    -fx-height: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
 #botaoEntrar {
     -fx-background-color: #00ACD5;
     -fx-background-radius: 24;
     -fx-border-radius: 24;
     -fx-width: 180px;
-    -fx-height: 32px;
+    -fx-height: 40px;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
 }
 
