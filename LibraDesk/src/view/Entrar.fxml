@@ -28,11 +28,11 @@
                </children></Pane>
             <Pane id="caixaTranslucida" nodeOrientation="LEFT_TO_RIGHT" prefHeight="180.0" prefWidth="480.0" stylesheets="@../libradesk/styleEntrar.css">
                <children>
-                  <VBox alignment="CENTER" prefHeight="380.0" prefWidth="480.0" style="-fx-background-image: url('../imagens/Fosco2.png');">
+                  <VBox alignment="CENTER" prefHeight="380.0" prefWidth="480.0" spacing="12.0" style="-fx-background-image: url('../imagens/Fosco2.png');">
                      <children>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="login">
                            <VBox.margin>
-                              <Insets bottom="8.0" top="24.0" />
+                              <Insets />
                            </VBox.margin>
                            <font>
                               <Font name="Segoe UI Semibold" size="20.0" />
@@ -45,7 +45,7 @@
                         </TextField>
                                      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="senha" textAlignment="CENTER">
                            <VBox.margin>
-                              <Insets bottom="8.0" top="24.0" />
+                              <Insets />
                            </VBox.margin>
                            <font>
                               <Font name="Segoe UI Semibold" size="20.0" />
@@ -56,14 +56,23 @@
                               <Font name="Segoe UI" size="12.0" />
                            </font>
                         </TextField>
-                        <Button id="botaoEntrar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btEntrar" prefHeight="24.0" prefWidth="96.0" text="entrar" textFill="WHITE">
+                        <HBox alignment="CENTER_RIGHT" maxWidth="320.0" prefHeight="40.0" prefWidth="200.0" spacing="12.0">
+                           <children>
+                              <Button id="botaoNovoCadastro" minWidth="96.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="122.0" text="novo cadastro" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button id="botaoEntrar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btEntrar" prefHeight="24.0" prefWidth="96.0" text="entrar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
                            <VBox.margin>
-                              <Insets top="24.0" />
+                              <Insets top="8.0" />
                            </VBox.margin>
-                           <font>
-                              <Font name="Segoe UI Black" size="16.0" />
-                           </font>
-                        </Button>
+                        </HBox>
                         
                                        </children>
                   </VBox>
