@@ -110,11 +110,11 @@
             </Pane>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0">
+      <HBox alignment="CENTER" maxHeight="82.0" prefHeight="100.0">
          <children>
             <ImageView fitHeight="82.0" fitWidth="400.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
-                  <Insets top="24.0" />
+                  <Insets />
                </HBox.margin>
                <image>
                   <Image url="@../imagens/Logos%20Públicas.png" />
@@ -122,7 +122,7 @@
             </ImageView>
          </children>
          <VBox.margin>
-            <Insets />
+            <Insets top="24.0" />
          </VBox.margin>
       </HBox>
    </children>
