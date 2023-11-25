@@ -189,6 +189,38 @@ public class AcervoController{
         return listaLivros;
     }
     
+    @FXML
+    public void btOpenEditarLivro(){
+        LivroModel livroSelecionado = livrosTableView.getSelectionModel().getSelectedItem();
+        
+        try {
+            // Carregando o arquivo FXML da tela de edição
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/EditarLivro.fxml"));
+            Parent root = loader.load();
+
+            // Obtendo o controlador da tela de edição
+            EditarLivroController controller = loader.getController();
+
+            // Passando o LeitorModel selecionado para o controlador
+            controller.preencherCampos(livroSelecionado);
+            //controller.setLeitoresController(this);
+
+            // Criando um novo palco (Stage) para a tela de edição
+            Stage edicaoLeitorStage = new Stage();
+            edicaoLeitorStage.setTitle("Editar Livro");
+            edicaoLeitorStage.initStyle(StageStyle.UTILITY);
+            edicaoLeitorStage.initModality(Modality.APPLICATION_MODAL);
+            edicaoLeitorStage.setScene(new Scene(root, 992, 614));
+
+            // Exibindo o palco
+            edicaoLeitorStage.showAndWait();
+        } catch (Exception ex) {
+            // Tratamento de exceção (substitua por um tratamento adequado)
+            ex.printStackTrace();
+        }
+        
+    }
+    
     
     
 }

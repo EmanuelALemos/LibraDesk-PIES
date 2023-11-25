@@ -110,9 +110,24 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" layoutX="719.0" mnemonicParsing="false" onAction="#btOpenEditarLivro" prefHeight="40.0" prefWidth="186.0" text="editar livro" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagens/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </Pane>
-            <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#btNovoLivro" prefHeight="40.0" prefWidth="186.0" text="novo livro" textFill="WHITE" HBox.hgrow="ALWAYS">
+            <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#btNovoLivro" prefHeight="40.0" prefWidth="186.0" text="novo livro" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

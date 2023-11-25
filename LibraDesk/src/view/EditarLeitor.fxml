@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="992.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditarLeitorController">
+    <stylesheets>
+        <URL value="@libradesk-novolivro.css" />
+    </stylesheets>
+   <children>
+      <GridPane layoutX="46.0" maxHeight="518.0" maxWidth="896.0" prefHeight="518.0" prefWidth="898.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="48.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Editar Leitor">
+                     <font>
+                        <Font name="Segoe UI Bold" size="36.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Pane>
+                     <children>
+                        <Label layoutX="30.0" layoutY="23.0" text="Nome">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nomeLeitor" layoutX="30.0" layoutY="43.0" prefHeight="38.0" prefWidth="400.0" promptText="Nome" style="-fx-background-color: transparent; -fx-border-color: #808080; -fx-border-width: 0 0 2 0;">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Pane>
+                     <children>
+                        <Label layoutX="30.0" layoutY="23.0" text="CPF">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cpfLeitor" layoutX="30.0" layoutY="47.0" prefHeight="38.0" prefWidth="400.0" promptText="CPF" style="-fx-background-color: transparent; -fx-border-color: #808080; -fx-border-width: 0 0 2 0;">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="104.0" prefWidth="446.0">
+                     <children>
+                        <Pane>
+                           <children>
+                              <Label layoutX="30.0" layoutY="23.0" text="Telefone 1">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="telefone1Leitor" layoutX="30.0" layoutY="47.0" prefHeight="38.0" prefWidth="400.0" promptText="Telefone 1" style="-fx-background-color: transparent; -fx-border-color: #808080; -fx-border-width: 0 0 2 0;">
+                                 <font>
+                                    <Font name="Segoe UI" size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <Pane />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Pane>
+                     <children>
+                        <Label layoutX="30.0" layoutY="23.0" text="Cidade">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cidadeLeitor" layoutX="30.0" layoutY="44.0" prefHeight="38.0" prefWidth="400.0" promptText="Cidade" style="-fx-background-color: transparent; -fx-border-color: #808080; -fx-border-width: 0 0 2 0;">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Pane>
+                     <children>
+                        <Label layoutX="30.0" layoutY="23.0" text="Bairro">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="bairroLeitor" layoutX="30.0" layoutY="47.0" prefHeight="38.0" prefWidth="400.0" promptText="Bairro" style="-fx-background-color: transparent; -fx-border-color: #808080; -fx-border-width: 0 0 2 0;">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="104.0" prefWidth="446.0" />
+                  <Pane prefHeight="86.0" prefWidth="874.0">
+                     <children>
+                        <Label layoutX="30.0" layoutY="23.0" text="Número">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="numeroLeitor" layoutX="30.0" layoutY="47.0" prefHeight="38.0" prefWidth="400.0" promptText="Número" style="-fx-background-color: transparent; -fx-border-color: #808080; -fx-border-width: 0 0 2 0;">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Pane>
+                     <children>
+                        <Label layoutX="30.0" layoutY="23.0" text="Rua">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ruaLeitor" layoutX="30.0" layoutY="47.0" prefHeight="38.0" prefWidth="400.0" promptText="Rua" style="-fx-background-color: transparent; -fx-border-color: #808080; -fx-border-width: 0 0 2 0;">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="104.0" prefWidth="448.0" spacing="12.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Button fx:id="botaoCancelarLeitor" alignment="CENTER" mnemonicParsing="false" onAction="#btCancelarLeitor" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-background-radius: 40;" text="cancelar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="botaoConfirmarLeitor" alignment="CENTER" mnemonicParsing="false" onAction="#btEditarLeitor" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #00ACD5; -fx-background-radius: 40;" text="confirmar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="104.0" prefWidth="446.0" GridPane.rowIndex="4">
+               <children>
+                  <Pane>
+                     <children>
+                        <Label layoutX="30.0" layoutY="23.0" text="Telefone 2">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="telefone2Leitor" layoutX="30.0" layoutY="47.0" prefHeight="38.0" prefWidth="400.0" promptText="Telefone 2" style="-fx-background-color: transparent; -fx-border-color: #808080; -fx-border-width: 0 0 2 0;">
+                           <font>
+                              <Font name="Segoe UI" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+
+
+   </children>
+</AnchorPane>

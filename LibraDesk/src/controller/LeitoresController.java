@@ -62,6 +62,37 @@ public class LeitoresController{
     protected void btNovoLeitor(ActionEvent e){
         openNovoLeitorPopup();
     }
+    
+    @FXML
+    protected void btEditarLeitor(ActionEvent e){
+        LeitorModel leitorSelecionado = leitoresTableView.getSelectionModel().getSelectedItem();
+
+        try {
+            // Carregando o arquivo FXML da tela de edição
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/EditarLeitor.fxml"));
+            Parent root = loader.load();
+
+            // Obtendo o controlador da tela de edição
+            EditarLeitorController controller = loader.getController();
+
+            // Passando o LeitorModel selecionado para o controlador
+            controller.preencherCampos(leitorSelecionado);
+            controller.setLeitoresController(this);
+
+            // Criando um novo palco (Stage) para a tela de edição
+            Stage edicaoLeitorStage = new Stage();
+            edicaoLeitorStage.setTitle("Editar Leitor");
+            edicaoLeitorStage.initStyle(StageStyle.UTILITY);
+            edicaoLeitorStage.initModality(Modality.APPLICATION_MODAL);
+            edicaoLeitorStage.setScene(new Scene(root, 992, 614));
+
+            // Exibindo o palco
+            edicaoLeitorStage.showAndWait();
+        } catch (Exception ex) {
+            // Tratamento de exceção (substitua por um tratamento adequado)
+            ex.printStackTrace();
+        }
+    }
 
     private static void openNovoLeitorPopup() {
         try {
@@ -126,7 +157,11 @@ public class LeitoresController{
         leitoresTableView.getColumns().addAll(colNomeCompleto, colCpf, colTelefoneUm, colTelefoneDois,colEndereco, colNumero);
 
         // Obtendo a lista de leitores e preenchendo a TableView
-        List<LeitorModel> leitores = pegarLeitores(); // Implemente o método pegarLeitores conforme necessário
+        atualizarTabela();
+    }
+    
+    public void atualizarTabela(){
+        List<LeitorModel> leitores = pegarLeitores(); 
         preencherTableViewLeitor(leitores);
     }
     
@@ -181,40 +216,58 @@ public class LeitoresController{
     }
     
     public List<LeitorModel> pesquisarLeitorPorNome(String nomeLeitor) {
-    Conexao conSing = Conexao.getInstancy();
-    Connection conexao = conSing.getConexao();
-    List<LeitorModel> listaLeitores = new ArrayList<>();
+        Conexao conSing = Conexao.getInstancy();
+        Connection conexao = conSing.getConexao();
+        List<LeitorModel> listaLeitores = new ArrayList<>();
 
-    try {
-        String sql = "SELECT * FROM Leitor l JOIN pessoa p ON l.cpf = p.cpf WHERE (p.pnome || ' ' || p.sobrenome) LIKE ? ";
-        
-        PreparedStatement preparedStatement = conexao.prepareStatement(sql);
-        preparedStatement.setString(1, "%" + nomeLeitor + "%");
-        ResultSet resultSetLeitor = preparedStatement.executeQuery();
+        try {
+            String sql = "SELECT * FROM Leitor l JOIN pessoa p ON l.cpf = p.cpf WHERE (p.pnome || ' ' || p.sobrenome) LIKE ? ";
 
-        while (resultSetLeitor.next()) {
-            LeitorModel leitor = new LeitorModel(
-                resultSetLeitor.getString("pnome"),
-                resultSetLeitor.getString("sobrenome"),
-                resultSetLeitor.getString("cpf"),
-                resultSetLeitor.getString("telefone_um"),
-                resultSetLeitor.getString("telefone_dois"),
-                resultSetLeitor.getString("bairro"),
-                resultSetLeitor.getString("rua"),
-                resultSetLeitor.getString("cidade"),
-                resultSetLeitor.getInt("numero")
-            );
-            listaLeitores.add(leitor);
+            PreparedStatement preparedStatement = conexao.prepareStatement(sql);
+            preparedStatement.setString(1, "%" + nomeLeitor + "%");
+            ResultSet resultSetLeitor = preparedStatement.executeQuery();
+
+            while (resultSetLeitor.next()) {
+                LeitorModel leitor = new LeitorModel(
+                    resultSetLeitor.getString("pnome"),
+                    resultSetLeitor.getString("sobrenome"),
+                    resultSetLeitor.getString("cpf"),
+                    resultSetLeitor.getString("telefone_um"),
+                    resultSetLeitor.getString("telefone_dois"),
+                    resultSetLeitor.getString("bairro"),
+                    resultSetLeitor.getString("rua"),
+                    resultSetLeitor.getString("cidade"),
+                    resultSetLeitor.getInt("numero")
+                );
+                listaLeitores.add(leitor);
+            }
+        } catch (SQLException excecaoLeitor) {
+            excecaoLeitor.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Deu errado: " + excecaoLeitor.getMessage());
         }
-    } catch (SQLException excecaoLeitor) {
-        excecaoLeitor.printStackTrace();
-        JOptionPane.showMessageDialog(null, "Deu errado: " + excecaoLeitor.getMessage());
+
+        return listaLeitores;
     }
 
-    return listaLeitores;
-}
-
-    
+    @FXML
+    public void btExcluirLeitor(ActionEvent e){
+        Conexao conSing = Conexao.getInstancy();
+        Connection conexao = conSing.getConexao();
+        LeitorModel leitorSelecionado = leitoresTableView.getSelectionModel().getSelectedItem();
+        
+        
+        try{
+            String sql = "DELETE FROM Leitor WHERE cpf = ?";            
+            PreparedStatement preparedStatement = conexao.prepareStatement(sql);
+            preparedStatement.setString(1, leitorSelecionado.getCpf());          
+            preparedStatement.executeUpdate();
+            atualizarTabela();
+                    
+        }catch (SQLException excecaoLeitor) {
+            excecaoLeitor.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Deu errado: " + excecaoLeitor.getMessage());
+        }
+    }
     
     
     
