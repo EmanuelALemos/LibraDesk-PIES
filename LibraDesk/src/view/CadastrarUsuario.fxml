@@ -82,14 +82,20 @@
                               <Font name="Segoe UI" size="12.0" />
                            </font>
                         </TextField>
-                        <Button id="botaoEntrar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btEntrar" prefHeight="24.0" prefWidth="96.0" text="cadastrar" textFill="WHITE">
-                           <VBox.margin>
-                              <Insets top="24.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Segoe UI Black" size="16.0" />
-                           </font>
-                        </Button>
+                        <HBox alignment="CENTER" maxHeight="60.0" prefHeight="100.0" prefWidth="160.0" spacing="16.0">
+                           <children>
+                              <Button id="botaoCancelar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btEntrar" prefHeight="24.0" prefWidth="96.0" text="voltar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button id="botaoEntrar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btEntrar" prefHeight="24.0" prefWidth="96.0" text="cadastrar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
                         
                                        </children>
                   </VBox>
