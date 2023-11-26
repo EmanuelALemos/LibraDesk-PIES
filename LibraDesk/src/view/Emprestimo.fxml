@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmprestimosController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmprestimosController">
    <children>
       <Pane id="pageTop" prefHeight="120.0" prefWidth="1434.0" style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1363.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
@@ -113,7 +113,7 @@
                   </Button>
                </children>
             </Pane>
-            <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#btNovoEmprestimo" prefHeight="40.0" prefWidth="209.0" text="novo empréstimo" textFill="WHITE" HBox.hgrow="ALWAYS">
+            <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="209.0" text="novo empréstimo" textFill="WHITE" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -128,7 +128,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="editButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#btEditarEmprestimo" prefHeight="40.0" prefWidth="202.0" text="editar empréstimo" textFill="WHITE">
+            <Button id="editButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" text="editar empréstimo" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -143,7 +143,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="removeButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#btExcluirEmprestimo" prefHeight="40.0" prefWidth="206.0" text="excluir empréstimo" textFill="WHITE">
+            <Button id="removeButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="206.0" text="excluir empréstimo" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

@@ -20,4 +20,9 @@ public class LoginController{
         Main.changeScreen("acervo");
     }
     
+    @FXML
+    protected void btNovoCadastro(ActionEvent e){
+        Main.changeScreen("novoUsuario");
+    
+    }
 }
