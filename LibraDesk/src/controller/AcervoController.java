@@ -121,6 +121,10 @@ public class AcervoController{
         
         livrosTableView.getColumns().addAll(colId, colTitulo, colAutor, colLocalizacao, colNumExemplares);
         
+        atualizarTabela();
+    }
+    
+    public void atualizarTabela(){
         List<LivroModel> acervo = pegarLivrosAcervo();
         preencherTableView(acervo);
     }
@@ -203,7 +207,7 @@ public class AcervoController{
 
             // Passando o LeitorModel selecionado para o controlador
             controller.preencherCampos(livroSelecionado);
-            //controller.setLeitoresController(this);
+            controller.setAcervoController(this);
 
             // Criando um novo palco (Stage) para a tela de edição
             Stage edicaoLeitorStage = new Stage();
@@ -221,6 +225,24 @@ public class AcervoController{
         
     }
     
+    @FXML
+    public void BtExcluirLivro(ActionEvent e){
+        LivroModel livroSelecionado = livrosTableView.getSelectionModel().getSelectedItem();
+        Conexao conSing = Conexao.getInstancy();
+        Connection conexao = conSing.getConexao();
+        
+        try{
+            String sql = "DELETE FROM Livro WHERE id = ?";
+            PreparedStatement preparedStatement = conexao.prepareStatement(sql);
+            preparedStatement.setInt(1, livroSelecionado.getId());
+            
+            preparedStatement.executeUpdate();
+            atualizarTabela();
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+    
+    }
     
     
 }

@@ -132,7 +132,7 @@
                               <Font name="System Bold" size="25.0" />
                            </font>
                         </Button>
-                        <Button fx:id="botaoConfirmarLivro" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #00ACD5; -fx-background-radius: 40;" text="confirmar" textFill="WHITE">
+                        <Button fx:id="botaoConfirmarLivro" mnemonicParsing="false" onAction="#btEditarLivro" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #00ACD5; -fx-background-radius: 40;" text="confirmar" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
