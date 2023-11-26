@@ -45,6 +45,34 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
 }
 
+#removeButton {
+    -fx-background-color: #f10f0f;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
+#editButton {
+    -fx-background-color: #00ACD5;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
+#removeButton:hover {
+    -fx-background-color: #df0d0d;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
+#editButton:hover {
+    -fx-background-color: #00a0c7;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
 #addButton:hover {
     -fx-background-color: #ffce39;
     -fx-background-radius: 24;
