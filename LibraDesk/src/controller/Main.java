@@ -37,7 +37,6 @@ public class Main extends Application{
         Parent xmlLeitores = FXMLLoader.load(getClass().getResource("../view/Leitores.fxml"));
         Parent xmlEmprestimos = FXMLLoader.load(getClass().getResource("../view/Emprestimo.fxml"));
         Parent xmlEm_Atraso = FXMLLoader.load(getClass().getResource("../view/Em_Atraso.fxml"));
-        Parent xmlNovoLivro = FXMLLoader.load(getClass().getResource("../view/NovoLivro.fxml"));
 
         //criando as cenas
         Login = new Scene(xmlLogin, 1280,720);
@@ -55,15 +54,13 @@ public class Main extends Application{
         Em_Atraso = new Scene(xmlEm_Atraso, 1280,720);
         Em_Atraso.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
 
-        NovoLivro = new Scene(xmlNovoLivro, 1280,720);
-        NovoLivro.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
-
         //definindo a cena inicial
         primaryStage.setScene(Login);
         primaryStage.show();
     }
     
     public static void changeScreen(String src){
+        // stage.setScene(newScene);
         switch (src){
             case "login":
                 stage.setScene(Login);
@@ -80,32 +77,29 @@ public class Main extends Application{
             case "em_atraso":
                 stage.setScene(Em_Atraso);
                 break;
-            case "novoLivro":
-                openNovoLivroPopup();
-                break;
         }
     }
     
-    private static void openNovoLivroPopup() {
-        try {
-            // Carregando o arquivo FXML da tela NovoLivro
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/NovoLivro.fxml"));
-            Parent root = loader.load();
+    // private static void openNovoLivroPopup() {
+    //     try {
+    //         // Carregando o arquivo FXML da tela NovoLivro
+    //         FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/NovoLivro.fxml"));
+    //         Parent root = loader.load();
 
-            // Criando um novo palco (Stage) para a tela NovoLivro
-            Stage novoLivroStage = new Stage();
-            novoLivroStage.setTitle("Novo Livro");
-            novoLivroStage.initStyle(StageStyle.UTILITY);
-            novoLivroStage.initModality(Modality.APPLICATION_MODAL);
-            novoLivroStage.setScene(new Scene(root, 992, 614));
+    //         // Criando um novo palco (Stage) para a tela NovoLivro
+    //         Stage novoLivroStage = new Stage();
+    //         novoLivroStage.setTitle("Novo Livro");
+    //         novoLivroStage.initStyle(StageStyle.UTILITY);
+    //         novoLivroStage.initModality(Modality.APPLICATION_MODAL);
+    //         novoLivroStage.setScene(new Scene(root, 992, 614));
 
-            // Exibindo o palco
-            novoLivroStage.showAndWait();
-        } catch (Exception e) {
-            // Tratamento de exceção (substitua por um tratamento adequado)
-            e.printStackTrace();
-    }
-    }
+    //         // Exibindo o palco
+    //         novoLivroStage.showAndWait();
+    //     } catch (Exception e) {
+    //         // Tratamento de exceção (substitua por um tratamento adequado)
+    //         e.printStackTrace();
+    // }
+    // }
     
     public static void main(String[] args ) {
         launch(args);

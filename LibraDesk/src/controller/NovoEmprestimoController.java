@@ -51,20 +51,24 @@ public class NovoEmprestimoController{
     
     @FXML
     public void btCadastrarEmprestimo(ActionEvent e) {
-    // Criando um empréstimo com multa=0, dataRealDev=null e status=true
-    EmprestimoModel emprestimo = new EmprestimoModel(
-            parseDate(dataEmprestimo.getText()),
-            parseDate(dataDevolucao.getText()), 
-            null, 
-            0, 
-            cpfLeitorEmprestimo.getText(),
-            0, 
-            true 
-    );
+        // Criando um empréstimo com multa=0, dataRealDev=null e status=true
+        EmprestimoModel emprestimo = new EmprestimoModel(
+                parseDate(dataEmprestimo.getText()),
+                parseDate(dataDevolucao.getText()), 
+                null, 
+                0, 
+                cpfLeitorEmprestimo.getText(),
+                0, 
+                true 
+        );
 
     
-    Main.changeScreen("tela_desejada");
-}
-    
+        Main.changeScreen("emprestimos");
+    }
+
+
+    public void btCancelarEmprestimo(ActionEvent e) {
+        Main.changeScreen("emprestimos");
+    }
     
 }

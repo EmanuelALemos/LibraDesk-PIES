@@ -24,9 +24,15 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -41,7 +47,8 @@ public class AcervoController{
     
     @FXML
     protected void btNovoLivro(ActionEvent e){
-        Main.changeScreen("novoLivro");
+        // Main.changeScreen("novoLivro");
+        openNovoLivroPopup();
     }
 
      @FXML
@@ -57,6 +64,27 @@ public class AcervoController{
     @FXML
     protected void btEmAtraso(ActionEvent e){
         Main.changeScreen("em_atraso");
+    }
+
+    private static void openNovoLivroPopup() {
+        try {
+            // Carregando o arquivo FXML da tela NovoLivro
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/NovoLivro.fxml"));
+            Parent root = loader.load();
+
+            // Criando um novo palco (Stage) para a tela NovoLivro
+            Stage novoLivroStage = new Stage();
+            novoLivroStage.setTitle("Novo Livro");
+            novoLivroStage.initStyle(StageStyle.UTILITY);
+            novoLivroStage.initModality(Modality.APPLICATION_MODAL);
+            novoLivroStage.setScene(new Scene(root, 992, 614));
+
+            // Exibindo o palco
+            novoLivroStage.showAndWait();
+        } catch (Exception e) {
+            // Tratamento de exceção (substitua por um tratamento adequado)
+            e.printStackTrace();
+        }
     }
     
     @FXML
@@ -93,6 +121,10 @@ public class AcervoController{
         
         livrosTableView.getColumns().addAll(colId, colTitulo, colAutor, colLocalizacao, colNumExemplares);
         
+        atualizarTabela();
+    }
+    
+    public void atualizarTabela(){
         List<LivroModel> acervo = pegarLivrosAcervo();
         preencherTableView(acervo);
     }
@@ -161,6 +193,56 @@ public class AcervoController{
         return listaLivros;
     }
     
+    @FXML
+    public void btOpenEditarLivro(){
+        LivroModel livroSelecionado = livrosTableView.getSelectionModel().getSelectedItem();
+        
+        try {
+            // Carregando o arquivo FXML da tela de edição
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/EditarLivro.fxml"));
+            Parent root = loader.load();
+
+            // Obtendo o controlador da tela de edição
+            EditarLivroController controller = loader.getController();
+
+            // Passando o LeitorModel selecionado para o controlador
+            controller.preencherCampos(livroSelecionado);
+            controller.setAcervoController(this);
+
+            // Criando um novo palco (Stage) para a tela de edição
+            Stage edicaoLeitorStage = new Stage();
+            edicaoLeitorStage.setTitle("Editar Livro");
+            edicaoLeitorStage.initStyle(StageStyle.UTILITY);
+            edicaoLeitorStage.initModality(Modality.APPLICATION_MODAL);
+            edicaoLeitorStage.setScene(new Scene(root, 992, 614));
+
+            // Exibindo o palco
+            edicaoLeitorStage.showAndWait();
+        } catch (Exception ex) {
+            // Tratamento de exceção (substitua por um tratamento adequado)
+            ex.printStackTrace();
+        }
+        
+    }
+    
+    @FXML
+    public void BtExcluirLivro(ActionEvent e){
+        LivroModel livroSelecionado = livrosTableView.getSelectionModel().getSelectedItem();
+        Conexao conSing = Conexao.getInstancy();
+        Connection conexao = conSing.getConexao();
+        
+        try{
+            String sql = "DELETE FROM Livro WHERE id = ?";
+            PreparedStatement preparedStatement = conexao.prepareStatement(sql);
+            preparedStatement.setInt(1, livroSelecionado.getId());
+            
+            preparedStatement.executeUpdate();
+            atualizarTabela();
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+    
+    }
     
     
 }

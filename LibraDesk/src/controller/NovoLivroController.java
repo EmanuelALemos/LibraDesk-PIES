@@ -43,6 +43,11 @@ public class NovoLivroController {
         Main.changeScreen("acervo");
     }
     
+    @FXML
+    public void btCancelar(ActionEvent e){
+        Main.changeScreen("acervo");
+    }
+    
     public void adicionarLivro(LivroModel livro) {
         
         try {     

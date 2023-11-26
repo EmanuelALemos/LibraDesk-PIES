@@ -1,0 +1,73 @@
+CREATE TABLE Pessoa
+(
+  pnome VARCHAR(50) NOT NULL,
+  sobrenome VARCHAR(50) NOT NULL,
+  cpf CHAR(14) NOT NULL,
+  PRIMARY KEY (cpf)
+);
+
+CREATE TABLE Bibliotecaria
+(
+  senha VARCHAR(40) NOT NULL,
+  cpf CHAR(14) NOT NULL,
+  PRIMARY KEY (cpf)
+);
+
+ALTER TABLE Bibliotecaria ADD CONSTRAINT cpf_fk 
+FOREIGN KEY (cpf) 
+REFERENCES Pessoa(cpf)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+CREATE TABLE Leitor
+(
+  telefone_um CHAR(14) NOT NULL,
+  telefone_dois CHAR(14),
+  cpf CHAR(14) NOT NULL,
+  bairro VARCHAR(50) NOT NULL,
+  cidade VARCHAR(50) NOT NULL,
+  rua VARCHAR(50) NOT NULL,
+  numero INT NOT NULL,
+  PRIMARY KEY (cpf)
+  
+);
+
+ALTER TABLE Leitor ADD CONSTRAINT cpf_fk 
+FOREIGN KEY (cpf) 
+REFERENCES Pessoa(cpf)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+CREATE TABLE Livro
+(
+  id SERIAL NOT NULL,
+  local_biblioteca VARCHAR(30) NOT NULL,
+  num_exemplares INT NOT NULL,
+  titulo VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE Emprestimo
+(
+  data_devolucao DATE NOT NULL,
+  data_prev_emprestimo DATE NOT NULL,
+  data_real_emprestimo DATE NOT NULL,
+  multa FLOAT NOT NULL,
+  id_emprestimo SERIAL NOT NULL,
+  cpf_leitor CHAR(14) NOT NULL,
+  id_livro INT NOT NULL,
+  status BOOLEAN NOT NULL,
+  PRIMARY KEY (id_emprestimo, id_livro)
+);
+
+ALTER TABLE Emprestimo ADD CONSTRAINT cpf_leitor_fk 
+FOREIGN KEY (cpf_leitor) 
+REFERENCES Leitor(cpf)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+ALTER TABLE Emprestimo ADD CONSTRAINT id_livro_fk 
+FOREIGN KEY (id_livro) 
+REFERENCES Livro(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
