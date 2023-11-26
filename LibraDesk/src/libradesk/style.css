@@ -69,3 +69,11 @@
     -fx-height: 40px;
     -fx-width: 700px;
 }
+
+
+#cancelButton {
+    -fx-background-color: #808080;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
