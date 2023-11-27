@@ -32,11 +32,10 @@ public class PessoaModel {
     public String getCpf() {
         return cpf;
     }
-    
-    public String getNomeCompleto(){
-        if(sobrenome.length() > 0)
-            return pnome + " " + sobrenome;
-        return pnome;
+
+
+    public String getNomeCompleto() {
+        return pnome + " " + sobrenome;
     }
 
     // Métodos Setter
@@ -52,4 +51,3 @@ public class PessoaModel {
         this.cpf = cpf;
     }
 }
-
