@@ -64,7 +64,8 @@ public class NovoEmprestimoController{
                 cpfLeitorEmprestimo.getText(),
                 livroEmprestimo.getText(),
                 0, 
-                true 
+                true,
+                0
         );
         
         adicionarEmprestimo(emprestimo);

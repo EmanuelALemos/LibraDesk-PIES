@@ -23,9 +23,10 @@ public class EmprestimoModel {
     private String nomeLivro;
     private int idLivro;
     private boolean status;
+    private int idEmprestimo;
 
     // Construtor
-    public EmprestimoModel(String nomeLeitor, Date dataEmprestimo, Date dataPrevDev, Date dataRealDev, double multa, String cpfLeitor, String nomeLivro, int idLivro, boolean status) {
+    public EmprestimoModel(String nomeLeitor, Date dataEmprestimo, Date dataPrevDev, Date dataRealDev, double multa, String cpfLeitor, String nomeLivro, int idLivro, boolean status, int idEmprestimo) {
         this.nomeLeitor = nomeLeitor;
         this.dataEmprestimo = dataEmprestimo;
         this.dataPrevDev = dataPrevDev;
@@ -35,6 +36,7 @@ public class EmprestimoModel {
         this.nomeLivro = nomeLivro;
         this.idLivro = idLivro;
         this.status = status;
+        this.idEmprestimo = idEmprestimo;
     }
 
     // Getters
@@ -74,6 +76,18 @@ public class EmprestimoModel {
     public boolean isStatus() {
         return status;
     }
+    
+    public String getStatus(){
+        if(status){
+            return "Emprestado";
+        }else{
+            return "Livre";
+        }
+    }
+    
+    public int getIdEmprestimo(){
+        return idEmprestimo;
+    }
 
     // Setters
     public void setNomeLeitor(String nomeLeitor){
@@ -110,6 +124,10 @@ public class EmprestimoModel {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+    
+    public void setIdEmprestimo(int idEmprestimo){
+        this.idEmprestimo = idEmprestimo;
     }
 }
 
