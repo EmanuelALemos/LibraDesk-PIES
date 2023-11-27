@@ -86,7 +86,7 @@
                         </TextField>
                         <HBox alignment="CENTER" maxHeight="40.0" maxWidth="320.0" prefHeight="100.0" prefWidth="160.0" spacing="12.0">
                            <children>
-                              <Button id="botaoCancelar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btEntrar" prefHeight="24.0" prefWidth="96.0" text="voltar" textFill="WHITE">
+                              <Button id="botaoCancelar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btVoltar" prefHeight="24.0" prefWidth="96.0" text="voltar" textFill="WHITE">
                                  <font>
                                     <Font name="Segoe UI Black" size="16.0" />
                                  </font>
@@ -94,7 +94,7 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Button id="botaoEntrar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btEntrar" prefHeight="24.0" prefWidth="96.0" text="cadastrar" textFill="WHITE">
+                              <Button id="botaoEntrar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btCadastrar" prefHeight="24.0" prefWidth="96.0" text="cadastrar" textFill="WHITE">
                                  <font>
                                     <Font name="Segoe UI Black" size="16.0" />
                                  </font>

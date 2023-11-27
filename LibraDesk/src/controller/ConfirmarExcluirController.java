@@ -20,5 +20,20 @@ import model.LivroModel;
  * @author arauj
  */
 public class ConfirmarExcluirController {
-    
+
+    private AcervoController acervoController;
+
+    public void setAcervoController(AcervoController acervoController) {
+        this.acervoController = acervoController;
+    }
+
+    @FXML
+    protected void btConfirmar(ActionEvent e){
+        acervoController.setConfirmacao(true);
+    }
+
+    @FXML
+    protected void btCancelar(ActionEvent e){
+        acervoController.setConfirmacao(false);
+    }
 }

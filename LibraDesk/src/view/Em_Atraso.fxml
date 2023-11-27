@@ -36,7 +36,7 @@
                   <Insets />
                </HBox.margin>
             </HBox>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="54.0" prefWidth="182.0" stylesheets="@style.css" text="Funcionários" HBox.hgrow="ALWAYS">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#btFuncionario" prefHeight="54.0" prefWidth="182.0" stylesheets="@style.css" text="Funcionários" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="24.0" />
                </font>

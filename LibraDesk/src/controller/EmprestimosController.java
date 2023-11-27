@@ -52,7 +52,7 @@ public class EmprestimosController {
 
     @FXML
     protected void btAcervo(ActionEvent e) {
-        Main.changeScreen("acevo");
+        Main.changeScreen("acervo");
     }
 
     @FXML
@@ -63,6 +63,16 @@ public class EmprestimosController {
     @FXML
     protected void btNovoEmprestimo(ActionEvent e) {
         openNovoEmprestimoPopup();
+    }
+
+    @FXML
+    protected void btFuncionario(ActionEvent e){
+        Main.changeScreen("funcionario");
+    }
+
+    @FXML
+    protected void btPerfil(ActionEvent e){
+        Main.changeScreen("perfil");
     }
 
     @FXML

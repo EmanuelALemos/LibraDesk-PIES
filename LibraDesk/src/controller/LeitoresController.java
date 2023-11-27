@@ -62,7 +62,17 @@ public class LeitoresController{
     protected void btNovoLeitor(ActionEvent e){
         openNovoLeitorPopup();
     }
-    
+
+    @FXML
+    protected void btPerfil(ActionEvent e){
+        Main.changeScreen("perfil");
+    }
+
+    @FXML
+    protected void btFuncionario(ActionEvent e){
+        Main.changeScreen("funcionario");
+    }
+
     @FXML
     protected void btEditarLeitor(ActionEvent e){
         LeitorModel leitorSelecionado = leitoresTableView.getSelectionModel().getSelectedItem();
@@ -269,10 +279,4 @@ public class LeitoresController{
         }
     }
 
-
-    @FXML
-    protected void btPerfil(ActionEvent e){
-        Main.changeScreen("perfil");
-    }
-    
 }
