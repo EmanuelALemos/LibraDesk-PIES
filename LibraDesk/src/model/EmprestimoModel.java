@@ -14,26 +14,35 @@ import java.util.Date;
 import java.util.Date;
 
 public class EmprestimoModel {
+    private String nomeLeitor;
     private Date dataEmprestimo;
     private Date dataPrevDev;
     private Date dataRealDev;
     private double multa;
     private String cpfLeitor;
+    private String nomeLivro;
     private int idLivro;
     private boolean status;
 
     // Construtor
-    public EmprestimoModel(Date dataEmprestimo, Date dataPrevDev, Date dataRealDev, double multa, String cpfLeitor, int idLivro, boolean status) {
+    public EmprestimoModel(String nomeLeitor, Date dataEmprestimo, Date dataPrevDev, Date dataRealDev, double multa, String cpfLeitor, String nomeLivro, int idLivro, boolean status) {
+        this.nomeLeitor = nomeLeitor;
         this.dataEmprestimo = dataEmprestimo;
         this.dataPrevDev = dataPrevDev;
         this.dataRealDev = dataRealDev;
         this.multa = multa;
         this.cpfLeitor = cpfLeitor;
+        this.nomeLivro = nomeLivro;
         this.idLivro = idLivro;
         this.status = status;
     }
 
     // Getters
+    public String getNomeLeitor(){
+        return nomeLeitor;
+    }
+    
+    
     public Date getDataEmprestimo() {
         return dataEmprestimo;
     }
@@ -53,6 +62,10 @@ public class EmprestimoModel {
     public String getCpfLeitor() {
         return cpfLeitor;
     }
+    
+    public String getNomeLivro(){
+        return nomeLivro;
+    }
 
     public int getIdLivro() {
         return idLivro;
@@ -63,6 +76,10 @@ public class EmprestimoModel {
     }
 
     // Setters
+    public void setNomeLeitor(String nomeLeitor){
+        this.nomeLeitor = nomeLeitor;
+    } 
+    
     public void setDataEmprestimo(Date dataEmprestimo) {
         this.dataEmprestimo = dataEmprestimo;
     }
@@ -81,6 +98,10 @@ public class EmprestimoModel {
 
     public void setCpfLeitor(String cpfLeitor) {
         this.cpfLeitor = cpfLeitor;
+    }
+    
+    public void setNomeLivro(String nomeLivro){
+        this.nomeLivro = nomeLivro;
     }
 
     public void setIdLivro(int idLivro) {

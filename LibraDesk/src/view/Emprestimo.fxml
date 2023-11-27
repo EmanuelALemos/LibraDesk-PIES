@@ -3,7 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -97,12 +97,12 @@
          <children>
             <Pane prefHeight="40.0" prefWidth="385.0" HBox.hgrow="ALWAYS">
                <children>
-                  <TextField id="spaceForFind" prefHeight="40.0" prefWidth="320.0" promptText="pesquise por um empréstimo" style="-fx-background-color: #ededed; -fx-border-radius: 24px;">
+                  <TextField id="spaceForFind" fx:id="txtCampoPesquisado" prefHeight="40.0" prefWidth="320.0" promptText="pesquise por um empréstimo" style="-fx-background-color: #ededed; -fx-border-radius: 24px;">
                      <font>
                         <Font name="Segoe UI" size="14.0" />
                      </font>
                   </TextField>
-                  <Button layoutX="277.0" layoutY="2.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #ededed; -fx-background-radius: 24;">
+                  <Button fx:id="btBuscarEmprestimo" layoutX="277.0" layoutY="2.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #ededed; -fx-background-radius: 24;">
                      <graphic>
                         <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -111,9 +111,10 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <MenuButton fx:id="btOpcaoBusca" layoutX="342.0" layoutY="11.0" mnemonicParsing="false" text="Opção busca" />
                </children>
             </Pane>
-            <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="209.0" text="novo empréstimo" textFill="WHITE" HBox.hgrow="ALWAYS">
+            <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#btNovoEmprestimo" prefHeight="40.0" prefWidth="209.0" text="novo empréstimo" textFill="WHITE" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -162,16 +163,7 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="18.0" layoutY="340.0" prefHeight="340.0" prefWidth="1236.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="340.0">
          <children>
-            <TableView prefHeight="340.0" prefWidth="1235.0" style="-fx-background-color: #FFFFFF;">
-              <columns>
-                <TableColumn prefWidth="93.59997177124023" style="-fx-background-color: #FFFFFF" text="Nº" />
-                <TableColumn prefWidth="241.60001373291016" style="-fx-background-color: #FFFFFF" text="Nome" />
-                  <TableColumn prefWidth="221.59994506835938" style="-fx-background-color: #FFFFFF;" text="CPF" />
-                  <TableColumn minWidth="0.0" prefWidth="231.20001220703125" style="-fx-background-color: #FFFFFF" text="Livro" />
-                  <TableColumn prefWidth="224.79998779296875" style="-fx-background-color: #FFFFFF" text="Data de Empréstimo" />
-                  <TableColumn minWidth="0.0" prefWidth="219.20001220703125" style="-fx-background-color: #FFFFFF" text="Data de Devolução" />
-              </columns>
-            </TableView>
+            <TableView fx:id="emprestimosTableView" prefHeight="340.0" prefWidth="1235.0" style="-fx-background-color: #FFFFFF;" />
          </children>
       </HBox>
    </children>
