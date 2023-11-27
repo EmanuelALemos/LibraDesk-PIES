@@ -50,7 +50,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Usuário">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Perfil">
                <font>
                   <Font size="24.0" />
                </font>
@@ -78,6 +78,9 @@
                                  <image>
                                     <Image url="@../imagens/arrow_back_ios.png" />
                                  </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </ImageView>
                            </graphic>
                         </Button>
@@ -86,6 +89,26 @@
                               <Font name="Segoe UI Semibold" size="36.0" />
                            </font>
                         </Text>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="486.0" spacing="16.0">
+                           <children>
+                              <Button id="editButton" fx:id="botaoEditarPerfil" maxWidth="140.0" minHeight="40.0" minWidth="140.0" mnemonicParsing="false" onAction="#btEditar" prefHeight="40.0" prefWidth="134.0" text="Editar" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button id="removeButton" fx:id="botaoExcluirPerfil" maxWidth="140.0" minHeight="40.0" minWidth="140.0" mnemonicParsing="false" onAction="#btExcluir" prefHeight="40.0" prefWidth="200.0" text="Excluir" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
                   </HBox>
                   <TableView prefHeight="200.0" prefWidth="200.0" stylesheets="@../libradesk/style.css">

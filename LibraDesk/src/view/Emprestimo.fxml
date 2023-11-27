@@ -111,7 +111,10 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <MenuButton fx:id="btOpcaoBusca" layoutX="342.0" layoutY="11.0" mnemonicParsing="false" text="Opção busca" />
+                  <MenuButton id="opcButton" fx:id="btOpcaoBusca" layoutX="340.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" text="Tipo busca" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font></MenuButton>
                </children>
             </Pane>
             <Button id="addButton" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#btNovoEmprestimo" prefHeight="40.0" prefWidth="209.0" text="novo empréstimo" textFill="WHITE" HBox.hgrow="ALWAYS">
@@ -136,7 +139,7 @@
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../imagens/edit.png" />
+                        <Image url="@../imagens/credit_score.png" />
 
                      </image>
                   </ImageView>
@@ -149,7 +152,10 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="18.0" layoutY="340.0" prefHeight="340.0" prefWidth="1236.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="340.0">
          <children>
-            <TableView fx:id="emprestimosTableView" prefHeight="340.0" prefWidth="1235.0" style="-fx-background-color: #FFFFFF;" />
+            <TableView fx:id="emprestimosTableView" prefHeight="340.0" prefWidth="1235.0" style="-fx-background-color: #FFFFFF;">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></TableView>
 
          </children>
       </HBox>
