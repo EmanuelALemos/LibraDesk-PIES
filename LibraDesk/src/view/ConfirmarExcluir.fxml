@@ -8,11 +8,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" maxWidth="521.0" prefHeight="247.0" prefWidth="444.0" styleClass="mainFxmlClass" stylesheets="@../libradesk/styleEntrar.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NovoLivroController">
+<AnchorPane id="AnchorPane" maxWidth="521.0" prefHeight="247.0" prefWidth="444.0" styleClass="mainFxmlClass" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NovoLivroController">
    <children>
       <VBox alignment="CENTER" layoutX="8.0" layoutY="38.0" prefHeight="200.0" prefWidth="530.0" spacing="12.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tem certeza que deseja excluir seu perfil ?" wrappingWidth="480.14691162109375">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tem certeza que deseja excluir seu perfil ?" textAlignment="CENTER" wrappingWidth="480.14691162109375">
                <font>
                   <Font name="Segoe UI Semibold" size="32.0" />
                </font>
@@ -27,7 +27,7 @@
                         <Font name="Segoe UI Black" size="16.0" />
                      </font>
                   </Button>
-                  <Button id="botaoEntrar" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="96.0" text="não" textFill="WHITE">
+                  <Button id="confirmButton" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="96.0" text="não" textFill="WHITE">
                      <font>
                         <Font name="Segoe UI Black" size="16.0" />
                      </font>

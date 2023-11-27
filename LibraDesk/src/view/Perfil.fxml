@@ -18,7 +18,7 @@
       <Pane id="pageTop" prefHeight="120.0" prefWidth="1434.0" style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1363.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1035.0" spacing="16.0" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="564.0" spacing="16.0" HBox.hgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="40.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -35,7 +35,7 @@
                   <Insets />
                </HBox.margin>
             </HBox>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="54.0" prefWidth="134.0" stylesheets="@style.css" text="Sobre" HBox.hgrow="ALWAYS">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="54.0" prefWidth="182.0" stylesheets="@style.css" text="Funcionários" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="24.0" />
                </font>
@@ -66,7 +66,8 @@
             <TextField id="campoDados" prefHeight="40.0" prefWidth="704.0" promptText="Seu nome">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
-               </font></TextField>
+               </font>
+            </TextField>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
@@ -75,7 +76,8 @@
             <TextField id="campoDados" prefHeight="40.0" prefWidth="704.0" promptText="meuemail@gmail.com">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
-               </font></TextField>
+               </font>
+            </TextField>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
@@ -84,7 +86,8 @@
             <TextField id="campoDados" prefHeight="40.0" prefWidth="704.0" promptText="senha123">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
-               </font></TextField>
+               </font>
+            </TextField>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                <children>
                   <Button id="addButton" fx:id="botaoEditarPerfil" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #00ACD5; -fx-background-radius: 40;" text="Editar" textFill="WHITE">
