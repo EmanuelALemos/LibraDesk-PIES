@@ -26,6 +26,7 @@ public class Main extends Application{
     private static Scene Em_Atraso;
     private static Scene NovoLivro;
     private static Scene CadastrarUsuario;
+    private static Scene Perfil;
     
     @Override
     public void start(Stage primaryStage)throws Exception{
@@ -39,6 +40,7 @@ public class Main extends Application{
         Parent xmlEmprestimos = FXMLLoader.load(getClass().getResource("../view/Emprestimo.fxml"));
         Parent xmlEm_Atraso = FXMLLoader.load(getClass().getResource("../view/Em_Atraso.fxml"));
         Parent xmlCadastrarUsuario = FXMLLoader.load(getClass().getResource("../view/CadastrarUsuario.fxml"));
+        Parent xmlPerfil = FXMLLoader.load(getClass().getResource("../view/Perfil.fxml"));
 
         //criando as cenas
         Login = new Scene(xmlLogin, 1280,720);
@@ -58,6 +60,9 @@ public class Main extends Application{
         
         CadastrarUsuario = new Scene(xmlCadastrarUsuario, 1280,720);
         CadastrarUsuario.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
+
+        Perfil = new Scene(xmlPerfil, 1280,720);
+        Perfil.getStylesheets().add(getClass().getResource("../libradesk/style.css").toExternalForm());
 
         //definindo a cena inicial
         primaryStage.setScene(Login);
@@ -84,6 +89,9 @@ public class Main extends Application{
                 break;
             case "novoUsuario":
                 stage.setScene(CadastrarUsuario);
+                break;
+            case "perfil":
+                stage.setScene(Perfil);
                 break;
         }
     }

@@ -14,12 +14,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmprestimosController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmprestimosController">
    <children>
       <Pane id="pageTop" prefHeight="120.0" prefWidth="1434.0" style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1363.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1035.0" spacing="16.0" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="782.0" spacing="16.0" HBox.hgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="40.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -36,7 +36,7 @@
                   <Insets />
                </HBox.margin>
             </HBox>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="54.0" prefWidth="134.0" stylesheets="@style.css" text="Sobre" HBox.hgrow="ALWAYS">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="54.0" prefWidth="182.0" stylesheets="@style.css" text="Funcionários" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="24.0" />
                </font>
@@ -47,7 +47,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Usuário">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#btPerfil" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Perfil">
                <font>
                   <Font size="24.0" />
                </font>
@@ -137,6 +137,7 @@
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imagens/edit.png" />
+
                      </image>
                   </ImageView>
                </graphic>
@@ -149,6 +150,7 @@
       <HBox alignment="CENTER" layoutX="18.0" layoutY="340.0" prefHeight="340.0" prefWidth="1236.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="340.0">
          <children>
             <TableView fx:id="emprestimosTableView" prefHeight="340.0" prefWidth="1235.0" style="-fx-background-color: #FFFFFF;" />
+
          </children>
       </HBox>
    </children>

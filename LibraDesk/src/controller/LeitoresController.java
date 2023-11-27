@@ -268,8 +268,11 @@ public class LeitoresController{
             JOptionPane.showMessageDialog(null, "Deu errado: " + excecaoLeitor.getMessage());
         }
     }
-    
-    
-    
+
+
+    @FXML
+    protected void btPerfil(ActionEvent e){
+        Main.changeScreen("perfil");
+    }
     
 }

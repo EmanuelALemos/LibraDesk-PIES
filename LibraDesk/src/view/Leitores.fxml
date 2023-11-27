@@ -18,7 +18,7 @@
       <Pane id="pageTop" prefHeight="120.0" prefWidth="1434.0" style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1363.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1035.0" spacing="16.0" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="610.0" spacing="16.0" HBox.hgrow="ALWAYS">
                <children>
                   <ImageView fitHeight="40.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -35,7 +35,7 @@
                   <Insets />
                </HBox.margin>
             </HBox>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="54.0" prefWidth="134.0" stylesheets="@style.css" text="Sobre" HBox.hgrow="ALWAYS">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="54.0" prefWidth="182.0" stylesheets="@style.css" text="Funcionários" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="24.0" />
                </font>
@@ -46,7 +46,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Usuário">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#btPerfil" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Perfil">
                <font>
                   <Font size="24.0" />
                </font>

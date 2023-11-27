@@ -9,9 +9,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="480.0" styleClass="mainFxmlClass" stylesheets="@../libradesk/styleEntrar.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NovoLivroController">
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="480.0" styleClass="mainFxmlClass"
+   stylesheets="@../libradesk/styleEntrar.css" xmlns="http://javafx.com/javafx/20.0.1"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NovoLivroController">
    <children>
-      <VBox alignment="CENTER" layoutX="8.0" layoutY="38.0" prefHeight="200.0" prefWidth="530.0" spacing="12.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <VBox alignment="CENTER" layoutX="8.0" layoutY="38.0" prefHeight="200.0" prefWidth="530.0"
+         spacing="12.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0"
+         AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Confirme que é você">
                <font>
@@ -26,18 +30,26 @@
                   <Font name="Segoe UI Semilight" size="16.0" />
                </font>
             </Text>
-            <TextField id="inserirDado" maxHeight="28.0" maxWidth="320.0" minHeight="28.0" prefWidth="320.0" promptText="Senha">
+            <TextField id="inserirDado" maxHeight="28.0" maxWidth="320.0" minHeight="28.0"
+               prefWidth="320.0" promptText="Senha">
                <font>
                   <Font name="Segoe UI Semibold" size="12.0" />
-               </font></TextField>
-            <HBox alignment="CENTER_RIGHT" maxHeight="40.0" maxWidth="320.0" prefHeight="100.0" prefWidth="200.0" spacing="12.0">
+               </font>
+            </TextField>
+            <HBox alignment="CENTER_RIGHT" maxHeight="40.0" maxWidth="320.0" prefHeight="100.0"
+               prefWidth="200.0" spacing="12.0">
                <children>
-                  <Button id="cancelButton" maxHeight="34.0" maxWidth="106.0" mnemonicParsing="false" onAction="#btEntrar" prefHeight="34.0" prefWidth="106.0" stylesheets="@../libradesk/style.css" text="cancelar" textFill="WHITE">
+                  <Button id="cancelButton" maxHeight="34.0" maxWidth="106.0"
+                     mnemonicParsing="false" onAction="#btEntrar" prefHeight="34.0"
+                     prefWidth="106.0" stylesheets="@../libradesk/style.css" text="cancelar"
+                     textFill="WHITE">
                      <font>
                         <Font name="Segoe UI Black" size="16.0" />
                      </font>
                   </Button>
-                  <Button id="botaoEntrar" maxHeight="34.0" maxWidth="110.0" mnemonicParsing="false" onAction="#btEntrar" prefHeight="34.0" prefWidth="102.0" text="confirmar" textFill="WHITE">
+                  <Button id="botaoEntrar" maxHeight="34.0" maxWidth="110.0" mnemonicParsing="false"
+                     onAction="#btEntrar" prefHeight="34.0" prefWidth="102.0" text="confirmar"
+                     textFill="WHITE">
                      <font>
                         <Font name="Segoe UI Black" size="16.0" />
                      </font>

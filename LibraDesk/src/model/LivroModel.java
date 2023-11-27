@@ -14,7 +14,6 @@ public class LivroModel {
     private String localBiblioteca;
     private int numeroExemplares;
     private String autor;
-    
 
     // Construtor
     public LivroModel(String titulo, int id, String localBiblioteca, int numeroExemplares, String autor) {
@@ -26,7 +25,7 @@ public class LivroModel {
     }
 
     public LivroModel() {
-        
+
     }
 
     // Métodos Get
@@ -41,8 +40,8 @@ public class LivroModel {
     public String getLocalBiblioteca() {
         return localBiblioteca;
     }
-    
-    public String getAutor(){
+
+    public String getAutor() {
         return autor;
     }
 
@@ -66,10 +65,9 @@ public class LivroModel {
     public void setNumeroExemplares(int numeroExemplares) {
         this.numeroExemplares = numeroExemplares;
     }
-    
-    public void setAutor(String autor){
+
+    public void setAutor(String autor) {
         this.autor = autor;
     }
 
-    
 }

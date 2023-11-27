@@ -130,4 +130,3 @@ public class EmprestimoModel {
         this.idEmprestimo = idEmprestimo;
     }
 }
-

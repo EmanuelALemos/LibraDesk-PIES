@@ -244,5 +244,10 @@ public class AcervoController{
     
     }
     
+    @FXML
+    protected void btPerfil(ActionEvent e){
+        Main.changeScreen("perfil");
+    }
+    
     
 }
