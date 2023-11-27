@@ -15,9 +15,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import model.EmprestimoModel;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.fxml.FXMLLoader;
 
 /**
  * FXML Controller class
@@ -72,6 +84,8 @@ public class NovoEmprestimoController{
 
         
         Main.changeScreen("emprestimos");
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.close();
     }
     
     public void adicionarEmprestimo(EmprestimoModel emprestimo){
