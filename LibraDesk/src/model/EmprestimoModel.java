@@ -23,7 +23,8 @@ public class EmprestimoModel {
     private boolean status;
 
     // Construtor
-    public EmprestimoModel(Date dataEmprestimo, Date dataPrevDev, Date dataRealDev, double multa, String cpfLeitor, int idLivro, boolean status) {
+    public EmprestimoModel(Date dataEmprestimo, Date dataPrevDev, Date dataRealDev, double multa, String cpfLeitor,
+            int idLivro, boolean status) {
         this.dataEmprestimo = dataEmprestimo;
         this.dataPrevDev = dataPrevDev;
         this.dataRealDev = dataRealDev;
@@ -91,4 +92,3 @@ public class EmprestimoModel {
         this.status = status;
     }
 }
-

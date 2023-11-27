@@ -32,8 +32,8 @@ public class PessoaModel {
     public String getCpf() {
         return cpf;
     }
-    
-    public String getNomeCompleto(){
+
+    public String getNomeCompleto() {
         return pnome + " " + sobrenome;
     }
 
@@ -50,4 +50,3 @@ public class PessoaModel {
         this.cpf = cpf;
     }
 }
-

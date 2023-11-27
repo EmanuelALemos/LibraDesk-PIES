@@ -59,6 +59,27 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
 }
 
+#cancelButton {
+    -fx-background-color: #00ACD5;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
+#confirmButton {
+    -fx-background-color: #808080;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
+#confirmButton:hover {
+    -fx-background-color: #717171;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
 #removeButton:hover {
     -fx-background-color: #df0d0d;
     -fx-background-radius: 24;
@@ -67,6 +88,13 @@
 }
 
 #editButton:hover {
+    -fx-background-color: #00a0c7;
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+
+#cancelButton:hover {
     -fx-background-color: #00a0c7;
     -fx-background-radius: 24;
     -fx-border-radius: 24;
@@ -96,12 +124,4 @@
     -fx-padding: 0 0 0 24;
     -fx-height: 40px;
     -fx-width: 700px;
-}
-
-
-#cancelButton {
-    -fx-background-color: #808080;
-    -fx-background-radius: 24;
-    -fx-border-radius: 24;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
 }

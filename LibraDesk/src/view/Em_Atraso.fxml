@@ -14,19 +14,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Em_AtrasoController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0"
+   style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css"
+   xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="controller.Em_AtrasoController">
    <children>
-      <Pane id="pageTop" prefHeight="120.0" prefWidth="1434.0" style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1363.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
+      <Pane id="pageTop" prefHeight="120.0" prefWidth="1434.0"
+         style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0"
+         AnchorPane.rightAnchor="0.0" />
+      <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1363.0"
+         AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1035.0" spacing="16.0" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1035.0" spacing="16.0"
+               HBox.hgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="40.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="61.0" pickOnBounds="true"
+                     preserveRatio="true">
                      <image>
                         <Image url="@../imagens/LogoLibraDesk.png" />
                      </image>
                   </ImageView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LibraDesk" wrappingWidth="137.6875">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LibraDesk"
+                     wrappingWidth="137.6875">
                      <font>
                         <Font name="Segoe UI" size="32.0" />
                      </font>
@@ -36,7 +45,9 @@
                   <Insets />
                </HBox.margin>
             </HBox>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="54.0" prefWidth="134.0" stylesheets="@style.css" text="Sobre" HBox.hgrow="ALWAYS">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT"
+               prefHeight="54.0" prefWidth="134.0" stylesheets="@style.css" text="Sobre"
+               HBox.hgrow="ALWAYS">
                <font>
                   <Font size="24.0" />
                </font>
@@ -47,7 +58,8 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Usuário">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT"
+               prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Usuário">
                <font>
                   <Font size="24.0" />
                </font>
@@ -57,9 +69,13 @@
             </Button>
          </children>
       </HBox>
-      <HBox alignment="TOP_CENTER" layoutX="81.0" layoutY="127.0" prefHeight="50.0" prefWidth="1280.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="160.0">
+      <HBox alignment="TOP_CENTER" layoutX="81.0" layoutY="127.0" prefHeight="50.0"
+         prefWidth="1280.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0"
+         AnchorPane.topAnchor="160.0">
          <children>
-            <Button id="navegationButton" mnemonicParsing="false" onAction="#btAcervo" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Acervo" HBox.hgrow="ALWAYS">
+            <Button id="navegationButton" mnemonicParsing="false" onAction="#btAcervo"
+               prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Acervo"
+               HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
@@ -67,7 +83,9 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="navegationButton" mnemonicParsing="false" onAction="#btLeitores" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Leitores" HBox.hgrow="ALWAYS">
+            <Button id="navegationButton" mnemonicParsing="false" onAction="#btLeitores"
+               prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Leitores"
+               HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
@@ -75,7 +93,9 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="navegationButton" mnemonicParsing="false" onAction="#btEmprestimos" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Empréstimos" HBox.hgrow="ALWAYS">
+            <Button id="navegationButton" mnemonicParsing="false" onAction="#btEmprestimos"
+               prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Empréstimos"
+               HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
@@ -83,7 +103,8 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="navegationButtonClick" mnemonicParsing="false" prefHeight="50.0" prefWidth="320.0" stylesheets="@style.css" text="Em Atraso" HBox.hgrow="ALWAYS">
+            <Button id="navegationButtonClick" mnemonicParsing="false" prefHeight="50.0"
+               prefWidth="320.0" stylesheets="@style.css" text="Em Atraso" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
@@ -93,18 +114,24 @@
             </Button>
          </children>
       </HBox>
-      <HBox layoutX="40.0" layoutY="222.0" prefHeight="40.0" prefWidth="1200.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="260.0">
+      <HBox layoutX="40.0" layoutY="222.0" prefHeight="40.0" prefWidth="1200.0"
+         AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="260.0">
          <children>
             <Pane prefHeight="40.0" prefWidth="934.0" HBox.hgrow="ALWAYS">
                <children>
-                  <TextField id="spaceForFind" prefHeight="40.0" prefWidth="320.0" promptText="pesquise por um leitor ou um livro" style="-fx-background-color: #ededed; -fx-border-radius: 24px;">
+                  <TextField id="spaceForFind" prefHeight="40.0" prefWidth="320.0"
+                     promptText="pesquise por um leitor ou um livro"
+                     style="-fx-background-color: #ededed; -fx-border-radius: 24px;">
                      <font>
                         <Font name="Segoe UI" size="14.0" />
                      </font>
                   </TextField>
-                  <Button layoutX="277.0" layoutY="2.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #ededed; -fx-background-radius: 24;">
+                  <Button layoutX="277.0" layoutY="2.0" mnemonicParsing="false" prefHeight="36.0"
+                     prefWidth="36.0"
+                     style="-fx-background-color: #ededed; -fx-background-radius: 24;">
                      <graphic>
-                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true"
+                           preserveRatio="true">
                            <image>
                               <Image url="@../imagens/search.png" />
                            </image>
@@ -115,16 +142,23 @@
             </Pane>
          </children>
       </HBox>
-      <HBox alignment="CENTER" layoutX="18.0" layoutY="340.0" prefHeight="340.0" prefWidth="1236.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="340.0">
+      <HBox alignment="CENTER" layoutX="18.0" layoutY="340.0" prefHeight="340.0" prefWidth="1236.0"
+         AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0"
+         AnchorPane.topAnchor="340.0">
          <children>
             <TableView prefHeight="340.0" prefWidth="1235.0" style="-fx-background-color: #FFFFFF;">
-              <columns>
-                <TableColumn prefWidth="295.9999580383301" style="-fx-background-color: #FFFFFF" text="Nome" />
-                <TableColumn prefWidth="334.4000549316406" style="-fx-background-color: #FFFFFF" text="Livro" />
-                  <TableColumn prefWidth="237.59991455078125" style="-fx-background-color: #FFFFFF;" text="Data de Devolução" />
-                  <TableColumn minWidth="0.0" prefWidth="138.4000244140625" style="-fx-background-color: #FFFFFF" text="Multa" />
-                  <TableColumn prefWidth="226.39996337890625" style="-fx-background-color: #FFFFFF" text="Dias de Atraso" />
-              </columns>
+               <columns>
+                  <TableColumn prefWidth="295.9999580383301" style="-fx-background-color: #FFFFFF"
+                     text="Nome" />
+                  <TableColumn prefWidth="334.4000549316406" style="-fx-background-color: #FFFFFF"
+                     text="Livro" />
+                  <TableColumn prefWidth="237.59991455078125" style="-fx-background-color: #FFFFFF;"
+                     text="Data de Devolução" />
+                  <TableColumn minWidth="0.0" prefWidth="138.4000244140625"
+                     style="-fx-background-color: #FFFFFF" text="Multa" />
+                  <TableColumn prefWidth="226.39996337890625" style="-fx-background-color: #FFFFFF"
+                     text="Dias de Atraso" />
+               </columns>
             </TableView>
          </children>
       </HBox>

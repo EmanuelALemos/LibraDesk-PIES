@@ -13,19 +13,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AcervoController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0"
+   style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css"
+   xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="controller.AcervoController">
    <children>
-      <Pane id="pageTop" prefHeight="120.0" prefWidth="1434.0" style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1363.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
+      <Pane id="pageTop" prefHeight="120.0" prefWidth="1434.0"
+         style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0"
+         AnchorPane.rightAnchor="0.0" />
+      <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1363.0"
+         AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1035.0" spacing="16.0" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1035.0" spacing="16.0"
+               HBox.hgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="40.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="61.0" pickOnBounds="true"
+                     preserveRatio="true">
                      <image>
                         <Image url="@../imagens/LogoLibraDesk.png" />
                      </image>
                   </ImageView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LibraDesk" wrappingWidth="137.6875">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LibraDesk"
+                     wrappingWidth="137.6875">
                      <font>
                         <Font name="Segoe UI" size="32.0" />
                      </font>
@@ -35,7 +44,9 @@
                   <Insets />
                </HBox.margin>
             </HBox>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="54.0" prefWidth="134.0" stylesheets="@style.css" text="Sobre" HBox.hgrow="ALWAYS">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT"
+               prefHeight="54.0" prefWidth="134.0" stylesheets="@style.css" text="Sobre"
+               HBox.hgrow="ALWAYS">
                <font>
                   <Font size="24.0" />
                </font>
@@ -46,7 +57,8 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Acervo">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT"
+               prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Acervo">
                <font>
                   <Font size="24.0" />
                </font>
@@ -66,16 +78,19 @@
             <TextField id="campoDados" prefHeight="40.0" prefWidth="704.0" promptText="Seu nome">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
-               </font></TextField>
+               </font>
+            </TextField>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
                </font>
             </Text>
-            <TextField id="campoDados" prefHeight="40.0" prefWidth="704.0" promptText="meuemail@gmail.com">
+            <TextField id="campoDados" prefHeight="40.0" prefWidth="704.0"
+               promptText="meuemail@gmail.com">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
-               </font></TextField>
+               </font>
+            </TextField>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
@@ -84,10 +99,14 @@
             <TextField id="campoDados" prefHeight="40.0" prefWidth="704.0" promptText="senha123">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
-               </font></TextField>
+               </font>
+            </TextField>
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                <children>
-                  <Button id="addButton" fx:id="botaoEditarPerfil" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #00ACD5; -fx-background-radius: 40;" text="Editar" textFill="WHITE">
+                  <Button id="addButton" fx:id="botaoEditarPerfil" mnemonicParsing="false"
+                     prefHeight="40.0" prefWidth="200.0"
+                     style="-fx-background-color: #00ACD5; -fx-background-radius: 40;" text="Editar"
+                     textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
@@ -95,7 +114,10 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="addButton" fx:id="botaoExcluirPerfil" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-background-radius: 40;" text="Excluir" textFill="WHITE">
+                  <Button id="addButton" fx:id="botaoExcluirPerfil" mnemonicParsing="false"
+                     prefHeight="40.0" prefWidth="200.0"
+                     style="-fx-background-color: #808080; -fx-background-radius: 40;"
+                     text="Excluir" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
@@ -103,7 +125,10 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="addButton" fx:id="botaoLogout" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FFDB06; -fx-background-radius: 40;" text="Sair" textFill="WHITE">
+                  <Button id="addButton" fx:id="botaoLogout" mnemonicParsing="false"
+                     prefHeight="40.0" prefWidth="200.0"
+                     style="-fx-background-color: #FFDB06; -fx-background-radius: 40;" text="Sair"
+                     textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
