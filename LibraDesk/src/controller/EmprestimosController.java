@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -240,6 +242,51 @@ public class EmprestimosController {
         
         return listaEmprestimo;
     }
+
+    public void calcularMulta(int idEmprestimo){
+        Conexao conSing = Conexao.getInstancy();
+        Connection conexao = conSing.getConexao();
+        LocalDate dataAtual = LocalDate.now();
+
+
+        try{
+            
+            String sql = "SELECT * FROM emprestimo WHERE id_emprestimo = ?";           
+            PreparedStatement preparedStatement = conexao.prepareStatement(sql);
+            preparedStatement.setInt(1, idEmprestimo);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            
+            while(resultSet.next()){
+                Date dataPrevDevolucao = resultSet.getDate("data_prev_dev");
+                LocalDate dataPrevDevolucaoLocalDate = new java.sql.Date(dataPrevDevolucao.getTime()).toLocalDate();
+                
+                
+                long diferencaEmDias = calcularDiferencaDias(dataPrevDevolucaoLocalDate, dataAtual);
+                double multa = diferencaEmDias * 0.50;
+                
+                if(multa < 0){
+                    multa = 0;
+                }
+
+                String sql2 = "UPDATE emprestimo SET multa = ? WHERE id_emprestimo = ?";
+                PreparedStatement preparedStatement2 = conexao.prepareStatement(sql2);
+                preparedStatement2.setDouble(1, multa);
+                preparedStatement2.setInt(2, idEmprestimo);
+                preparedStatement2.executeUpdate();
+            }
+            
+        } catch (SQLException excecaoLeitor) {
+            excecaoLeitor.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Deu errado 2 " + excecaoLeitor.getMessage());
+        }
+        
+
+    }
+
+    public static long calcularDiferencaDias(LocalDate data1, LocalDate data2) {
+        // Calcula a diferença em dias usando ChronoUnit
+        return ChronoUnit.DAYS.between(data1, data2);
+    }
     
     public List<EmprestimoModel> pegarEmprestimos(){
         Conexao conSing = Conexao.getInstancy();
@@ -254,6 +301,8 @@ public class EmprestimosController {
             ResultSet resultSet = preparedStatement.executeQuery();
             
             while(resultSet.next()){
+                calcularMulta(resultSet.getInt("id_emprestimo"));
+                
                 EmprestimoModel emprestimo = new EmprestimoModel(
                         resultSet.getString("pnome") + " " + resultSet.getString("sobrenome"),
                         resultSet.getDate("data_emprestimo"),
