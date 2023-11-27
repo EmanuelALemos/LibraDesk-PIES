@@ -29,5 +29,10 @@ public class Em_AtrasoController{
     protected void btAcervo(ActionEvent e){
         Main.changeScreen("acervo");
     }
+
+    @FXML
+    protected void btPerfil(ActionEvent e){
+        Main.changeScreen("perfil");
+    }
     
 }

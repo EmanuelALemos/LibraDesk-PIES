@@ -61,5 +61,10 @@ public class EmprestimosController{
             e.printStackTrace();
         }
     }
+
+    @FXML
+    protected void btPerfil(ActionEvent e){
+        Main.changeScreen("perfil");
+    }
     
 }

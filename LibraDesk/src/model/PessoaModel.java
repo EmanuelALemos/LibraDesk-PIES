@@ -33,6 +33,7 @@ public class PessoaModel {
         return cpf;
     }
 
+
     public String getNomeCompleto() {
         return pnome + " " + sobrenome;
     }
