@@ -34,7 +34,9 @@ public class PessoaModel {
     }
     
     public String getNomeCompleto(){
-        return pnome + " " + sobrenome;
+        if(sobrenome.length() > 0)
+            return pnome + " " + sobrenome;
+        return pnome;
     }
 
     // Métodos Setter

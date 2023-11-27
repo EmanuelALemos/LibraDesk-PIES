@@ -19,7 +19,7 @@ import model.LivroModel;
  *
  * @author arauj
  */
-public class ConfirmarExcluirController {
+public class EditarPerfilController {
     protected void btCancelar(ActionEvent e){
         Main.changeScreen("perfil");
     }

@@ -16,7 +16,7 @@ import javafx.fxml.FXML;
 public class CadastrarUsuarioController{
     
     @FXML
-    protected void btVoltarar(ActionEvent e){
+    protected void btVoltar(ActionEvent e){
         Main.changeScreen("login");
     }
     
