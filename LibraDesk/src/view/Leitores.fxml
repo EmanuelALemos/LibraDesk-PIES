@@ -46,7 +46,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Usuário">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#btPerfil" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Perfil">
                <font>
                   <Font size="24.0" />
                </font>

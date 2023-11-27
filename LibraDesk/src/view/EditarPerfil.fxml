@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="992.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NovoLivroController">
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="992.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditarPerfilController">
     <stylesheets>
         <URL value="@libradesk-novolivro.css" />
     </stylesheets>
@@ -127,7 +127,7 @@
                <children>
                   <HBox alignment="CENTER_RIGHT" prefHeight="104.0" prefWidth="452.0" spacing="12.0">
                      <children>
-                        <Button fx:id="botaoCancelarEdicao" mnemonicParsing="false" onAction="#BtCadastrar" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-background-radius: 40;" text="cancelar" textFill="WHITE">
+                        <Button fx:id="botaoCancelarEdicao" mnemonicParsing="false" onAction="#BtCancelar" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #808080; -fx-background-radius: 40;" text="cancelar" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>

@@ -243,6 +243,10 @@ public class AcervoController{
         }
     
     }
+
+    protected void btPerfil(ActionEvent e){
+        Main.changeScreen("perfil");
+    }
     
     
 }
