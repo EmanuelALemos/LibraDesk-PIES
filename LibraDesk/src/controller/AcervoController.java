@@ -224,30 +224,66 @@ public class AcervoController{
         }
         
     }
+
+
+    public boolean condicao = false;
+    public void setCondicao(boolean condicao){
+        this.condicao = condicao;
+    }
     
     @FXML
     public void BtExcluirLivro(ActionEvent e){
         LivroModel livroSelecionado = livrosTableView.getSelectionModel().getSelectedItem();
         Conexao conSing = Conexao.getInstancy();
         Connection conexao = conSing.getConexao();
-        
-        try{
-            String sql = "DELETE FROM Livro WHERE id = ?";
-            PreparedStatement preparedStatement = conexao.prepareStatement(sql);
-            preparedStatement.setInt(1, livroSelecionado.getId());
+        openExcluirPopup();
+
+        if(condicao == true){
             
-            preparedStatement.executeUpdate();
-            atualizarTabela();
-        }catch(Exception ex){
-            ex.printStackTrace();
-        }
+            try{
+                String sql = "DELETE FROM Livro WHERE id = ?";
+                PreparedStatement preparedStatement = conexao.prepareStatement(sql);
+                preparedStatement.setInt(1, livroSelecionado.getId());
+                
+                preparedStatement.executeUpdate();
+                atualizarTabela();
+            }catch(Exception ex){
+                ex.printStackTrace();
+            }
     
+        }else{
+            JOptionPane.showMessageDialog(null, "Exclusão cancelada!");
+        }
     }
     
     @FXML
     protected void btPerfil(ActionEvent e){
         Main.changeScreen("perfil");
     }
+
+    private void openExcluirPopup() {
+        JOptionPane.showMessageDialog(null, "chegou");
+        
+        try {
+            // Carregando o arquivo FXML da tela NovoLivro
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/ConfirmarExcluir.fxml"));
+            Parent root = loader.load();
+
+            ConfirmarExcluirController controller = loader.getController();
+            controller.setAcervoController(this);
+            // Criando um novo palco (Stage) para a tela NovoLivro
+            Stage novoLeitorStage = new Stage();
+            novoLeitorStage.setTitle("Confrimar Exclusão");
+            novoLeitorStage.initStyle(StageStyle.UTILITY);
+            novoLeitorStage.initModality(Modality.APPLICATION_MODAL);
+            novoLeitorStage.setScene(new Scene(root, 530, 200));
+
+            // Exibindo o palco
+            novoLeitorStage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+            
+        }
     
-    
+    } 
 }
