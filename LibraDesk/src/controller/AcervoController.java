@@ -74,11 +74,14 @@ public class AcervoController {
         Main.changeScreen("perfil");
     }
 
-    private static void openNovoLivroPopup() {
+    private void openNovoLivroPopup() {
         try {
             // Carregando o arquivo FXML da tela NovoLivro
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/NovoLivro.fxml"));
             Parent root = loader.load();
+
+            NovoLivroController controller = loader.getController();
+            controller.setAcervoController(this);
 
             // Criando um novo palco (Stage) para a tela NovoLivro
             Stage novoLivroStage = new Stage();

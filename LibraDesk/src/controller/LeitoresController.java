@@ -104,11 +104,17 @@ public class LeitoresController{
         }
     }
 
-    private static void openNovoLeitorPopup() {
+    private void openNovoLeitorPopup() {
         try {
             // Carregando o arquivo FXML da tela NovoLivro
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/NovoLeitor.fxml"));
             Parent root = loader.load();
+
+            NovoLeitorController controller = loader.getController();
+
+            // Passando o LeitorModel selecionado para o controlador
+            controller.setLeitoresController(this);
+            
 
             // Criando um novo palco (Stage) para a tela NovoLivro
             Stage novoLeitorStage = new Stage();
@@ -181,19 +187,16 @@ public class LeitoresController{
         List<LeitorModel> listaLeitores = new ArrayList<>();
         
         try {
-        String sql = "SELECT * FROM Leitor";
+        String sql = "SELECT * FROM Leitor l JOIN Pessoa p on l.cpf = p.cpf";
         PreparedStatement preparedStatement = conexao.prepareStatement(sql);
         ResultSet resultSetLeitor = preparedStatement.executeQuery();
-        
-        String sqlPessoa = "SELECT * FROM Pessoa";
-        PreparedStatement preparedStatementPessoa = conexao.prepareStatement(sqlPessoa);
-        ResultSet resultSetPessoa = preparedStatementPessoa.executeQuery();
+       
 
-            while (resultSetLeitor.next() && resultSetPessoa.next()) {
+            while (resultSetLeitor.next()) {
                 LeitorModel leitor = new LeitorModel(
-                    resultSetPessoa.getString("pnome"),
-                    resultSetPessoa.getString("sobrenome"),
-                    resultSetPessoa.getString("cpf"),
+                    resultSetLeitor.getString("pnome"),
+                    resultSetLeitor.getString("sobrenome"),
+                    resultSetLeitor.getString("cpf"),
                     resultSetLeitor.getString("telefone_um"),
                     resultSetLeitor.getString("telefone_dois"),
                     resultSetLeitor.getString("bairro"),

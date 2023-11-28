@@ -85,11 +85,15 @@ public class EmprestimosController {
     private TextField txtCampoPesquisado;
     
 
-    private static void openNovoEmprestimoPopup() {
+    private void openNovoEmprestimoPopup() {
         try {
             // Carregando o arquivo FXML da tela NovoLivro
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/NovoEmprestimo.fxml"));
             Parent root = loader.load();
+
+            // Obtendo o controller da tela NovoLivro
+            NovoEmprestimoController controller = loader.getController();
+            controller.setEmprestimoController(this);
 
             // Criando um novo palco (Stage) para a tela NovoLivro
             Stage novoEmprestimoStage = new Stage();

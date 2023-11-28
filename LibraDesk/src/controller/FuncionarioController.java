@@ -5,6 +5,15 @@
 package controller;
 
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import conexaoDAO.Conexao;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +22,11 @@ import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import model.BibliotecariaModel;
+import java.sql.PreparedStatement;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import java.sql.ResultSet;
 /**
  * FXML Controller class
  *
@@ -20,6 +34,9 @@ import javafx.stage.StageStyle;
  */
 public class FuncionarioController{
     
+    @FXML
+    private TableView<BibliotecariaModel> TableViewFuncionario;
+
     @FXML
     protected void btVoltar(ActionEvent e){
         Main.changeScreen("acervo");
@@ -38,6 +55,63 @@ public class FuncionarioController{
     @FXML
     protected void btConfirmarEdicao(ActionEvent e){
         openEditarPopup();
+    }
+    
+    @FXML
+    public void initialize(){
+        TableColumn<BibliotecariaModel, String> colNome = new TableColumn<>("Funcionário");
+        colNome.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNomeCompleto()));
+
+        TableColumn<BibliotecariaModel, String> colCargo = new TableColumn<>("Cargo");
+        colCargo.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().cargoCoordenador()));
+
+        TableViewFuncionario.getColumns().addAll(colNome, colCargo);
+        atualizarTabela();
+
+
+
+    }
+
+    public void atualizarTabela(){
+        List<BibliotecariaModel> listaBibliotecaria = getFuncionarios();
+        preencherTableView(listaBibliotecaria);
+    }
+
+    public List<BibliotecariaModel> getFuncionarios(){
+        Conexao conSing = Conexao.getInstancy();
+        Connection conexao = conSing.getConexao();
+        List<BibliotecariaModel> listaBibliotecaria = new ArrayList<>();
+
+        try{
+            String sql = "SELECT * FROM bibliotecaria b JOIN pessoa p ON b.cpf = p.cpf";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+
+            while(rs.next()){
+                BibliotecariaModel bibliotecaria = new BibliotecariaModel(
+                    rs.getString("pnome"),
+                    rs.getString("sobrenome"),
+                    rs.getString("cpf"),
+                    rs.getString("email"),
+                    rs.getString("senha"),
+                    rs.getBoolean("coordenador")
+                );
+                
+
+                listaBibliotecaria.add(bibliotecaria);
+            }
+
+        }catch (SQLException exececaoAcervo) {
+            exececaoAcervo.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Deu errado: " + exececaoAcervo.getMessage());
+        }
+
+        return listaBibliotecaria;
+    }
+
+    public void preencherTableView(List<BibliotecariaModel> listaBibliotecaria){       
+        ObservableList<BibliotecariaModel> observableListBibliotecaria = FXCollections.observableArrayList(listaBibliotecaria);
+        TableViewFuncionario.setItems(observableListBibliotecaria);
     }
 
     private static void openExcluirPopup() {
@@ -80,5 +154,7 @@ public class FuncionarioController{
             e.printStackTrace();
         }
     }
+     
+    
     
 }
