@@ -41,8 +41,8 @@ public class PerfilController{
     }
 
     @FXML
-    protected void btFuncionarios(ActionEvent e){
-        Main.changeScreen("funcionarios");
+    protected void btFuncionario(ActionEvent e){
+        Main.changeScreen("funcionario");
     }
 
     private static void openExcluirPopup() {

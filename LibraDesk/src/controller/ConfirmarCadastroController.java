@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
 import org.w3c.dom.Node;
@@ -31,7 +32,9 @@ public class ConfirmarCadastroController {
 
     @FXML
     protected void btCancelar(ActionEvent e){
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.close();
+        
+        Main.changeScreen("novoUsuario");
+        //Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        //stage.close();
     }
 }

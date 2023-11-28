@@ -7,6 +7,12 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -32,8 +38,8 @@ public class CadastrarUsuarioController{
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/ConfirmarExcluir.fxml"));
             Parent root = loader.load();
 
-            ConfirmarExcluirController controller = loader.getController();
-            controller.setAcervoController(this);
+            //ConfirmarExcluirController controller = loader.getController();
+            //controller.setAcervoController(this);
             // Criando um novo palco (Stage) para a tela NovoLivro
             Stage confirmarStage = new Stage();
             confirmarStage.setTitle("Confirmar Cadastro");

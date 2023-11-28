@@ -29,9 +29,14 @@ public class FuncionarioController{
     protected void btExcluir(ActionEvent e){
         openExcluirPopup();
     }
-
-     @FXML
-    protected void btEditarFuncionario(ActionEvent e){
+    
+    @FXML
+    protected void btPerfil(ActionEvent e){
+        Main.changeScreen("perfil");
+    }
+    
+    @FXML
+    protected void btConfirmarEdicao(ActionEvent e){
         openEditarPopup();
     }
 

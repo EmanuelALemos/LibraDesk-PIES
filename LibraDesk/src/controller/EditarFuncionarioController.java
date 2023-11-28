@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
 import org.w3c.dom.Node;
@@ -25,7 +26,7 @@ import model.LivroModel;
 public class EditarFuncionarioController {
     protected void btCancelar(ActionEvent e){
         Main.changeScreen("funcionarios");
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.close();
+        //Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        //stage.close();
     }
 }

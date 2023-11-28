@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="992.0" styleClass="mainFxmlClass" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditarFuncionarioController">
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="992.0" styleClass="mainFxmlClass" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditarFuncionarioController">
    <children>
       <GridPane maxHeight="518.0" maxWidth="896.0" prefHeight="518.0" prefWidth="896.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="48.0">
          <columnConstraints>
@@ -147,7 +147,7 @@
                <children>
                   <HBox alignment="CENTER_RIGHT" prefHeight="104.0" prefWidth="452.0" spacing="12.0">
                      <children>
-                        <Button id="cancelarBotao" fx:id="botaoCancelarEdicao" mnemonicParsing="false" onAction="#btCancelar" prefHeight="53.0" prefWidth="200.0" text="cancelar" textFill="WHITE">
+                        <Button id="cancelarBotao" fx:id="botaoCancelarEdicao" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" text="cancelar" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
@@ -155,7 +155,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button id="confirmarBotao" fx:id="botaoConfirmarEdicao" mnemonicParsing="false" onAction="#BtCadastrar" prefHeight="53.0" prefWidth="200.0" text="confirmar" textFill="WHITE">
+                        <Button id="confirmarBotao" fx:id="botaoConfirmarEdicao" mnemonicParsing="false" prefHeight="53.0" prefWidth="200.0" text="confirmar" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
