@@ -90,7 +90,6 @@ public class AcervoController {
             // Exibindo o palco
             novoLivroStage.showAndWait();
         } catch (Exception e) {
-            // Tratamento de exceção (substitua por um tratamento adequado)
             e.printStackTrace();
         }
     }
@@ -268,14 +267,14 @@ public class AcervoController {
             ConfirmarExcluirController controller = loader.getController();
             controller.setAcervoController(this);
             // Criando um novo palco (Stage) para a tela NovoLivro
-            Stage novoLeitorStage = new Stage();
-            novoLeitorStage.setTitle("Confrimar Exclusão");
-            novoLeitorStage.initStyle(StageStyle.UTILITY);
-            novoLeitorStage.initModality(Modality.APPLICATION_MODAL);
-            novoLeitorStage.setScene(new Scene(root, 530, 200));
+            Stage excluirStage = new Stage();
+            excluirStage.setTitle("Confrimar Exclusão");
+            excluirStage.initStyle(StageStyle.UTILITY);
+            excluirStage.initModality(Modality.APPLICATION_MODAL);
+            excluirStage.setScene(new Scene(root, 530, 200));
 
             // Exibindo o palco
-            novoLeitorStage.showAndWait();
+            excluirStage.showAndWait();
         } catch (Exception e) {
             e.printStackTrace();
         }

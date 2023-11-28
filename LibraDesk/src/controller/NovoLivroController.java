@@ -41,6 +41,7 @@ public class NovoLivroController {
         LivroModel livro = new LivroModel(tituloLivro.getText(), 0, localizacaoLivro.getText(), Integer.parseInt(numExemplaresLivro.getText()), autorLivro.getText());
         adicionarLivro(livro);
         Main.changeScreen("acervo");
+        
     }
     
     @FXML

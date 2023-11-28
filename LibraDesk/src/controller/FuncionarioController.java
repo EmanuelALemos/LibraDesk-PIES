@@ -18,16 +18,11 @@ import javafx.stage.StageStyle;
  *
  * @author arauj
  */
-public class PerfilController{
+public class FuncionarioController{
     
     @FXML
     protected void btVoltar(ActionEvent e){
         Main.changeScreen("acervo");
-    }
-
-     @FXML
-    protected void btLogout(ActionEvent e){
-        Main.changeScreen("login");
     }
 
      @FXML
@@ -36,13 +31,8 @@ public class PerfilController{
     }
 
      @FXML
-    protected void btEditar(ActionEvent e){
+    protected void btEditarFuncionario(ActionEvent e){
         openEditarPopup();
-    }
-
-    @FXML
-    protected void btFuncionarios(ActionEvent e){
-        Main.changeScreen("funcionarios");
     }
 
     private static void openExcluirPopup() {
@@ -52,14 +42,14 @@ public class PerfilController{
             Parent root = loader.load();
 
             // Criando um novo palco (Stage) para a tela NovoLivro
-            Stage novoLeitorStage = new Stage();
-            novoLeitorStage.setTitle("Confrimar Exclusão");
-            novoLeitorStage.initStyle(StageStyle.UTILITY);
-            novoLeitorStage.initModality(Modality.APPLICATION_MODAL);
-            novoLeitorStage.setScene(new Scene(root, 530, 200));
+            Stage excluirStage = new Stage();
+            excluirStage.setTitle("Confrimar Exclusão");
+            excluirStage.initStyle(StageStyle.UTILITY);
+            excluirStage.initModality(Modality.APPLICATION_MODAL);
+            excluirStage.setScene(new Scene(root, 530, 200));
 
             // Exibindo o palco
-            novoLeitorStage.showAndWait();
+            excluirStage.showAndWait();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -69,18 +59,18 @@ public class PerfilController{
      private static void openEditarPopup() {
         try {
             // Carregando o arquivo FXML da tela NovoLivro
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/EditarPerfil.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/EditarFuncionario.fxml"));
             Parent root = loader.load();
 
             // Criando um novo palco (Stage) para a tela NovoLivro
-            Stage novoLeitorStage = new Stage();
-            novoLeitorStage.setTitle("Editar Perfil");
-            novoLeitorStage.initStyle(StageStyle.UTILITY);
-            novoLeitorStage.initModality(Modality.APPLICATION_MODAL);
-            novoLeitorStage.setScene(new Scene(root, 992, 614));
+            Stage editarFuncionarioStage = new Stage();
+            editarFuncionarioStage.setTitle("Editar Funcionario");
+            editarFuncionarioStage.initStyle(StageStyle.UTILITY);
+            editarFuncionarioStage.initModality(Modality.APPLICATION_MODAL);
+            editarFuncionarioStage.setScene(new Scene(root, 992, 614));
 
             // Exibindo o palco
-            novoLeitorStage.showAndWait();
+            editarFuncionarioStage.showAndWait();
         } catch (Exception e) {
             e.printStackTrace();
         }
