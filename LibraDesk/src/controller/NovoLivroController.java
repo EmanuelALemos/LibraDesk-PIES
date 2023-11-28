@@ -12,6 +12,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javax.swing.JOptionPane;
+import javafx.stage.Stage;
+import javafx.scene.Node;
+
+
+
 import model.LivroModel;
 
 /**
@@ -33,6 +38,10 @@ public class NovoLivroController {
     @FXML
     private TextField numExemplaresLivro;
     
+    AcervoController acervo = new AcervoController();
+    public void setAcervoController(AcervoController acervo) {
+        this.acervo = acervo;
+    }
     
     
     @FXML
@@ -41,6 +50,10 @@ public class NovoLivroController {
         LivroModel livro = new LivroModel(tituloLivro.getText(), 0, localizacaoLivro.getText(), Integer.parseInt(numExemplaresLivro.getText()), autorLivro.getText());
         adicionarLivro(livro);
         Main.changeScreen("acervo");
+
+        acervo.atualizarTabela();
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.close();
         
     }
     

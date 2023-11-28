@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox id="page" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../libradesk/styleEntrar.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastrarUsuarioController">
+<VBox id="page" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../libradesk/styleEntrar.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastrarUsuarioController">
    <children>
       <HBox alignment="CENTER" prefHeight="380.0" prefWidth="600.0">
          <children>
@@ -42,7 +42,7 @@
                               <Font name="Segoe UI Semibold" size="20.0" />
                            </font>
                         </Text>
-                        <TextField id="inserirDado" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   nome" style="-fx-background-color: #FFFFFF; -fx-border-radius: 24; -fx-background-radius: 24;" stylesheets="@../libradesk/styleEntrar.css">
+                        <TextField id="inserirDado" fx:id="txtNomeUsuario" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   nome" style="-fx-background-color: #FFFFFF; -fx-border-radius: 24; -fx-background-radius: 24;" stylesheets="@../libradesk/styleEntrar.css">
                            <font>
                               <Font name="Segoe UI" size="12.0" />
                            </font>
@@ -55,7 +55,7 @@
                               <Font name="Segoe UI Semibold" size="20.0" />
                            </font>
                         </Text>
-                        <TextField id="inserirDado" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   email">
+                        <TextField id="inserirDado" fx:id="txtEmail" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   email">
                            <font>
                               <Font name="Segoe UI" size="12.0" />
                            </font>
@@ -65,15 +65,28 @@
                               <Font name="Segoe UI Semibold" size="20.0" />
                            </font>
                         </Text>
-                        <MenuButton id="menuCargo" mnemonicParsing="false" prefHeight="28.0" prefWidth="320.0" text="   cargo" textFill="#aeaeae">
+                        <MenuButton id="menuCargo" fx:id="menuButtomCargo" mnemonicParsing="false" prefHeight="28.0" prefWidth="320.0" text="   cargo" textFill="#aeaeae">
                           <items>
-                            <MenuItem mnemonicParsing="false" text="Bibliotecário (a)" />
-                            <MenuItem mnemonicParsing="false" text="Coordenador (a)" />
+                            <MenuItem fx:id="itemBibliotecaria" mnemonicParsing="false" text="Bibliotecário (a)" />
+                            <MenuItem fx:id="itemCoordenador" mnemonicParsing="false" text="Coordenador (a)" />
                           </items>
                            <font>
                               <Font name="Segoe UI Historic" size="12.0" />
                            </font>
                         </MenuButton>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Text>
+                        <TextField id="inserirDado" fx:id="txtCpf" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   cpf">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </TextField>
                         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
                            <font>
                               <Font name="Segoe UI Semibold" size="20.0" />
@@ -82,20 +95,7 @@
                               <Insets />
                            </VBox.margin>
                         </Text>
-                        <TextField id="inserirDado" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   senha">
-                           <font>
-                              <Font name="Segoe UI" size="12.0" />
-                           </font>
-                        </TextField>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar senha">
-                           <font>
-                              <Font name="Segoe UI Semibold" size="20.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Text>
-                        <TextField id="inserirDado" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   senha">
+                        <TextField id="inserirDado" fx:id="txtSenha" maxWidth="320.0" prefHeight="28.0" prefWidth="320.0" promptText="   senha">
                            <font>
                               <Font name="Segoe UI" size="12.0" />
                            </font>
