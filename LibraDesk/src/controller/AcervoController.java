@@ -235,7 +235,7 @@ public class AcervoController {
     public void setConfirmacao(boolean confirmacao) {
         this.confirmacao = confirmacao;
     }
-
+  
     @FXML
     public void BtExcluirLivro(ActionEvent e) {
         LivroModel livroSelecionado = livrosTableView.getSelectionModel().getSelectedItem();
@@ -279,5 +279,4 @@ public class AcervoController {
             e.printStackTrace();
         }
     }
-
 }
