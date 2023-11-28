@@ -46,3 +46,12 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
 }
 
+
+#menuCargo {
+    -fx-background-color: #FFFFFF; 
+    -fx-border-radius: 24;
+    -fx-background-radius: 24;
+    -fx-opacity: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 6, 0, 1, 2);
+}
+

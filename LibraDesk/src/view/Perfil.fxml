@@ -36,7 +36,7 @@
                   <Insets />
                </HBox.margin>
             </HBox>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="54.0" prefWidth="182.0" stylesheets="@style.css" text="Funcionários" HBox.hgrow="ALWAYS">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#btFuncionario" prefHeight="54.0" prefWidth="182.0" stylesheets="@style.css" text="Funcionários" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="24.0" />
                </font>
@@ -57,13 +57,13 @@
             </Button>
          </children>
       </HBox>
-      <HBox alignment="CENTER" layoutX="1.0" layoutY="122.0" prefHeight="598.0" prefWidth="1280.0">
+      <HBox alignment="CENTER" layoutX="1.0" layoutY="122.0" prefHeight="598.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="122.0">
          <children>
             <VBox alignment="TOP_CENTER" prefHeight="543.0" prefWidth="486.0" spacing="12.0">
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="750.0" spacing="16.0">
                      <children>
-                        <Button id="backButton" minHeight="48.0" mnemonicParsing="false" prefHeight="48.0">
+                        <Button id="backButton" minHeight="48.0" mnemonicParsing="false" onAction="#btVoltar" prefHeight="48.0">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -77,6 +77,9 @@
                                  </cursor>
                               </ImageView>
                            </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Button>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Perfil">
                            <font>
@@ -93,7 +96,7 @@
                         <Font name="Segoe UI Semibold" size="20.0" />
                      </font>
                   </Text>
-                  <TextField id="campoDados" prefHeight="40.0" prefWidth="704.0" promptText="Seu nome">
+                  <TextField id="campoDados" fx:id="campoNomePerfil" prefHeight="40.0" prefWidth="704.0" promptText="Seu nome">
                      <font>
                         <Font name="Segoe UI Semibold" size="20.0" />
                      </font>
@@ -103,7 +106,17 @@
                         <Font name="Segoe UI Semibold" size="20.0" />
                      </font>
                   </Text>
-                  <TextField id="campoDados" prefHeight="40.0" prefWidth="704.0" promptText="meuemail@gmail.com">
+                  <TextField id="campoDados" fx:id="campoEmailPerfil" prefHeight="40.0" prefWidth="704.0" promptText="meuemail@gmail.com">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField id="campoDados" fx:id="campoCargoPerfil" prefHeight="40.0" prefWidth="704.0" promptText="Cargo">
                      <font>
                         <Font name="Segoe UI Semibold" size="20.0" />
                      </font>
@@ -113,7 +126,7 @@
                         <Font name="Segoe UI Semibold" size="20.0" />
                      </font>
                   </Text>
-                  <TextField id="campoDados" prefHeight="40.0" prefWidth="704.0" promptText="senha123">
+                  <TextField id="campoDados" fx:id="campoSenhaPerfil" prefHeight="40.0" prefWidth="704.0" promptText="senha123">
                      <font>
                         <Font name="Segoe UI Semibold" size="20.0" />
                      </font>

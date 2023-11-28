@@ -58,6 +58,11 @@ public class Em_AtrasoController {
     protected void btPerfil(ActionEvent e){
         Main.changeScreen("perfil");
     }
+
+    @FXML
+    protected void btFuncionario(ActionEvent e){
+        Main.changeScreen("funcionario");
+    }
     
     @FXML
     private TableView<EmprestimoModel> emAtrasoTableView;

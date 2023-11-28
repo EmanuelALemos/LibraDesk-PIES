@@ -10,12 +10,12 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import javax.swing.Action;
 import javax.swing.JOptionPane;
+
+import org.w3c.dom.Node;
+
 import model.LivroModel;
 
 /**
@@ -23,22 +23,18 @@ import model.LivroModel;
  *
  * @author arauj
  */
-public class ConfirmarExcluirController {
-
-    private AcervoController acervoController;
-
-    public void setAcervoController(AcervoController acervoController) {
-        this.acervoController = acervoController;
-    }
+public class ConfirmarCadastroController {
 
     @FXML
     protected void btConfirmar(ActionEvent e){
-        acervoController.setConfirmacao(true);
+        
     }
 
     @FXML
     protected void btCancelar(ActionEvent e){
-        acervoController.setConfirmacao(false);
+        
+        Main.changeScreen("novoUsuario");
+        //Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        //stage.close();
     }
-
 }

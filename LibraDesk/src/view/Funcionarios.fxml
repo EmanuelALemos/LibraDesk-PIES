@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LeitoresController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" stylesheets="@../libradesk/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FuncionarioController">
    <children>
       <Pane id="pageTop" prefHeight="120.0" prefWidth="1434.0" style="-fx-background-color: #00ACD5;" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="1363.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
@@ -50,7 +50,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Perfil">
+            <Button id="menuButton" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#btPerfil" prefHeight="53.0" prefWidth="152.0" stylesheets="@style.css" text="Perfil">
                <font>
                   <Font size="24.0" />
                </font>
@@ -69,7 +69,7 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="750.0" spacing="16.0">
                      <children>
-                        <Button id="backButton" minHeight="48.0" mnemonicParsing="false" prefHeight="48.0">
+                        <Button id="backButton" minHeight="48.0" mnemonicParsing="false" onAction="#btVoltar" prefHeight="48.0">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -91,7 +91,7 @@
                         </Text>
                         <HBox alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="486.0" spacing="16.0">
                            <children>
-                              <Button id="editButton" fx:id="botaoEditarPerfil" maxWidth="140.0" minHeight="40.0" minWidth="140.0" mnemonicParsing="false" onAction="#btEditar" prefHeight="40.0" prefWidth="134.0" text="Editar" textFill="WHITE">
+                              <Button id="editButton" fx:id="botaoEditarPerfil" maxWidth="140.0" minHeight="40.0" minWidth="140.0" mnemonicParsing="false" onAction="#btConfirmarEdicao" prefHeight="40.0" prefWidth="134.0" text="Editar" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font>
