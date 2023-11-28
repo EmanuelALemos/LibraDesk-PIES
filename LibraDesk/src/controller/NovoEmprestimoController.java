@@ -48,6 +48,13 @@ public class NovoEmprestimoController{
     private TextField dataEmprestimo;
     @FXML
     private TextField dataDevolucao;
+
+    EmprestimosController emprestimoController = new EmprestimosController();
+    
+    
+    public void setEmprestimoController(EmprestimosController emprestimoController){
+        this.emprestimoController = emprestimoController;
+    }
     
     private Date parseDate(String dateString) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -82,7 +89,7 @@ public class NovoEmprestimoController{
         
         adicionarEmprestimo(emprestimo);
 
-        
+        emprestimoController.atualizarTabela();
         Main.changeScreen("emprestimos");
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         stage.close();

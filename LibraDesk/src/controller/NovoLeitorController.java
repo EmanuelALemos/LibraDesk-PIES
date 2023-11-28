@@ -13,6 +13,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javax.swing.JOptionPane;
+import javafx.stage.Stage;
+import javafx.scene.Node;
+
 import model.LeitorModel;
 import model.PessoaModel;
 
@@ -40,7 +43,10 @@ public class NovoLeitorController{
     @FXML
     private TextField numeroLeitor;
 
-    
+    LeitoresController leitoresController = new LeitoresController();
+    public void setLeitoresController(LeitoresController leitoresController){
+        this.leitoresController = leitoresController;
+    }
     
     
     @FXML
@@ -67,6 +73,9 @@ public class NovoLeitorController{
         );
         
         adicionarLeitor(leitor);
+        leitoresController.atualizarTabela();
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.close();
         Main.changeScreen("leitores");
     }
     
