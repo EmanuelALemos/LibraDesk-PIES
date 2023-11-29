@@ -121,6 +121,8 @@ public class NovoLeitorController{
 
     public void btCancelarLeitor(ActionEvent e) {
         Main.changeScreen("leitores");
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.close();
     }
   
 }

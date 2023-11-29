@@ -60,6 +60,8 @@ public class NovoLivroController {
     @FXML
     public void btCancelar(ActionEvent e){
         Main.changeScreen("acervo");
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.close();
     }
     
     public void adicionarLivro(LivroModel livro) {
