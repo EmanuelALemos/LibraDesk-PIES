@@ -256,8 +256,6 @@ public class AcervoController {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-        }else{
-            JOptionPane.showMessageDialog(null, "Exclusão cancelada!");
         }
     }
 

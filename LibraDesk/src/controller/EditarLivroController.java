@@ -10,7 +10,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import model.LivroModel;
 
@@ -54,6 +56,8 @@ public class EditarLivroController {
                 autorLivro.getText());
         
         EditarLivro(livro);
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.close();
         
         acervoController.atualizarTabela();
         Main.changeScreen("acervo");
@@ -62,6 +66,8 @@ public class EditarLivroController {
     @FXML
     public void btCancelar(ActionEvent e){
         Main.changeScreen("acervo");
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.close();
     }
     
     public void EditarLivro(LivroModel livro){

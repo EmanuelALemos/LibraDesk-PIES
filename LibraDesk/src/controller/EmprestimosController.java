@@ -151,6 +151,8 @@ public class EmprestimosController {
     }
     
     public void atualizarTabela(){
+        
+        calcularMulta();
         List<EmprestimoModel> emprestimos = pegarEmprestimos();
         preencherTableViewEmprestimo(emprestimos);
     
@@ -162,7 +164,7 @@ public class EmprestimosController {
     
     @FXML
     protected void btBuscarEmprestimo(ActionEvent action){
-        
+            
         
         
             if(getOpcaoBusca() == "Por leitor"){
@@ -257,7 +259,7 @@ public class EmprestimosController {
         return listaEmprestimo;
     }
 
-    public void calcularMulta(int idEmprestimo){
+    public void calcularMulta(){
         Conexao conSing = Conexao.getInstancy();
         Connection conexao = conSing.getConexao();
         LocalDate dataAtual = LocalDate.now();
@@ -265,9 +267,8 @@ public class EmprestimosController {
 
         try{
             
-            String sql = "SELECT * FROM emprestimo WHERE id_emprestimo = ?";           
+            String sql = "SELECT * FROM emprestimo";           
             PreparedStatement preparedStatement = conexao.prepareStatement(sql);
-            preparedStatement.setInt(1, idEmprestimo);
             ResultSet resultSet = preparedStatement.executeQuery();
             
             while(resultSet.next()){
@@ -285,7 +286,7 @@ public class EmprestimosController {
                 String sql2 = "UPDATE emprestimo SET multa = ? WHERE id_emprestimo = ?";
                 PreparedStatement preparedStatement2 = conexao.prepareStatement(sql2);
                 preparedStatement2.setDouble(1, multa);
-                preparedStatement2.setInt(2, idEmprestimo);
+                preparedStatement2.setInt(2, resultSet.getInt("id_emprestimo"));
                 preparedStatement2.executeUpdate();
             }
             
@@ -315,7 +316,7 @@ public class EmprestimosController {
             ResultSet resultSet = preparedStatement.executeQuery();
             
             while(resultSet.next()){
-                calcularMulta(resultSet.getInt("id_emprestimo"));
+                calcularMulta();
                 
                 EmprestimoModel emprestimo = new EmprestimoModel(
                         resultSet.getString("pnome") + " " + resultSet.getString("sobrenome"),

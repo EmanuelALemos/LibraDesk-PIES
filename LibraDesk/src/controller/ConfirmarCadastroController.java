@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
@@ -18,7 +19,7 @@ public class ConfirmarCadastroController {
     private TextField txtLogin;
 
     @FXML
-    private TextField txtSenha;
+    private PasswordField txtSenha;
 
     public CadastrarUsuarioController cadastrarUsuarioController;
 

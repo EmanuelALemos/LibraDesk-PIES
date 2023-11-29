@@ -262,14 +262,20 @@ public class LeitoresController{
         return listaLeitores;
     }
 
+    boolean confirmacao = false;
+    public void setConfirmacao(boolean confirmacao) {
+        this.confirmacao = confirmacao;
+    }
+
     @FXML
     public void btExcluirLeitor(ActionEvent e){
         Conexao conSing = Conexao.getInstancy();
         Connection conexao = conSing.getConexao();
         LeitorModel leitorSelecionado = leitoresTableView.getSelectionModel().getSelectedItem();
-        
-        
-        try{
+        openExcluirPopup();
+
+        if(confirmacao == true){
+            try{
             String sql = "DELETE FROM Leitor WHERE cpf = ?";            
             PreparedStatement preparedStatement = conexao.prepareStatement(sql);
             preparedStatement.setString(1, leitorSelecionado.getCpf());          
@@ -279,6 +285,30 @@ public class LeitoresController{
         }catch (SQLException excecaoLeitor) {
             excecaoLeitor.printStackTrace();
             JOptionPane.showMessageDialog(null, "Deu errado: " + excecaoLeitor.getMessage());
+        }
+        }
+        
+    }
+
+    private void openExcluirPopup() {
+        try {
+            // Carregando o arquivo FXML da tela NovoLivro
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("../view/ConfirmarExcluir2.fxml"));
+            Parent root = loader.load();
+
+            ConfirmarExcluir2Controller controller = loader.getController();
+            controller.setLeitoresController(this);
+            // Criando um novo palco (Stage) para a tela NovoLivro
+            Stage excluirStage = new Stage();
+            excluirStage.setTitle("Confrimar Exclusão");
+            excluirStage.initStyle(StageStyle.UTILITY);
+            excluirStage.initModality(Modality.APPLICATION_MODAL);
+            excluirStage.setScene(new Scene(root, 530, 200));
+
+            // Exibindo o palco
+            excluirStage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

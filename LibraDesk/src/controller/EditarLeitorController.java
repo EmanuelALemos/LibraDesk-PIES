@@ -11,7 +11,9 @@ import java.sql.SQLException;
 import java.util.List;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import model.LeitorModel;
 import model.PessoaModel;
@@ -81,6 +83,8 @@ public class EditarLeitorController {
         
         editarLeitor(leitor);
         leitoresController.atualizarTabela();  
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.close();
         Main.changeScreen("leitores");
         
     }
@@ -129,5 +133,7 @@ public class EditarLeitorController {
     @FXML
     public void btCancelarLeitor(ActionEvent e) {
         Main.changeScreen("leitores");
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.close();
     }
 }

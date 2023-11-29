@@ -18,6 +18,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -39,7 +40,7 @@ public class CadastrarUsuarioController{
     private TextField txtEmail;
 
     @FXML
-    private MenuButton btOpcaoBusca;
+    private MenuButton menuButtomCargo;
 
     @FXML
     private TextField txtSenha;
@@ -57,6 +58,27 @@ public class CadastrarUsuarioController{
     @FXML
     protected void btCadastrar(ActionEvent e){
         openConfirmarPopup();
+    }
+
+    @FXML
+    public void initialize(){
+        MenuItem item1 = new MenuItem("Coordenador(a)");
+        MenuItem item2 = new MenuItem("Bibliotecario(a)");
+        
+        item1.setOnAction(event -> handleOpcaoSelecionada(item1));
+        item2.setOnAction(event -> handleOpcaoSelecionada(item2));
+
+        
+        menuButtomCargo.getItems().addAll(item1, item2);
+    }
+
+    private void handleOpcaoSelecionada(MenuItem menuItem) {
+        // Atualiza o texto do MenuButton com o texto do item selecionado
+        menuButtomCargo.setText(menuItem.getText());
+        String estiloCSS = "-fx-text-fill: black;"; // Substitua "black" pela cor desejada
+
+        menuButtomCargo.setStyle(estiloCSS);
+        
     }
     
     
