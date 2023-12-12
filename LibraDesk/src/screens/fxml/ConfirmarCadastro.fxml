@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="360.0" prefWidth="480.0" styleClass="mainFxmlClass" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConfirmarCadastroController">
+   <children>
+      <VBox alignment="CENTER" layoutX="8.0" layoutY="38.0" prefHeight="200.0" prefWidth="530.0" spacing="12.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar Cadastro">
+               <font>
+                  <Font name="Segoe UI Semibold" size="32.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="8.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="login cordenação">
+               <font>
+                  <Font name="Segoe UI Semilight" size="16.0" />
+               </font>
+            </Text>
+            <TextField id="inserirDado" fx:id="txtLogin" maxHeight="28.0" maxWidth="320.0" minHeight="28.0" prefWidth="320.0" promptText="   login cordenação">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="senha cordenação">
+               <font>
+                  <Font name="Segoe UI Semilight" size="16.0" />
+               </font>
+            </Text>
+            <PasswordField id="inserirDado" fx:id="txtSenha" maxHeight="28.0" maxWidth="320.0" minHeight="28.0" prefWidth="320.0" promptText="   senha" />
+            <HBox alignment="CENTER" maxHeight="40.0" maxWidth="320.0" prefHeight="100.0" prefWidth="200.0" spacing="12.0">
+               <children>
+                  <Button id="confirmButton" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btCancelar" prefHeight="24.0" prefWidth="96.0" text="cancelar" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="cancelButton" maxHeight="24.0" maxWidth="96.0" mnemonicParsing="false" onAction="#btConfirmar" prefHeight="24.0" prefWidth="96.0" text="cadastrar" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="8.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

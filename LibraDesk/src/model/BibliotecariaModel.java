@@ -11,7 +11,6 @@ public class BibliotecariaModel extends PessoaModel {
         this.senha = senha;
         this.coordenador = coordenador;
     }
-
         
     
 

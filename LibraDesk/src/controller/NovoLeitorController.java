@@ -5,124 +5,25 @@
 package controller;
 
 
-import conexaoDAO.Conexao;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
-import javax.swing.JOptionPane;
-import javafx.stage.Stage;
-import javafx.scene.Node;
+import DAO.LeitoresDAO;
 
-import model.LeitorModel;
-import model.PessoaModel;
 
 /**
  * FXML Controller class
  *
  * @author arauj
  */
-public class NovoLeitorController{
-    
-    @FXML
-    private TextField nomeLeitor;
-    @FXML
-    private TextField cpfLeitor;
-    @FXML
-    private TextField telefone1Leitor;
-    @FXML
-    private TextField telefone2Leitor;
-    @FXML
-    private TextField cidadeLeitor;
-    @FXML
-    private TextField bairroLeitor;
-    @FXML
-    private TextField ruaLeitor;
-    @FXML
-    private TextField numeroLeitor;
+public class NovoLeitorController implements IController {
 
-    LeitoresController leitoresController = new LeitoresController();
-    public void setLeitoresController(LeitoresController leitoresController){
-        this.leitoresController = leitoresController;
-    }
-    
-    
-    @FXML
-    public void btCadastrarLeitor(ActionEvent e) {
-        String nomeCompleto = nomeLeitor.getText();
-        String[] partesNome = nomeCompleto.split(" ", 2);
-        String primeiroNome = partesNome[0];
-        String sobrenome = (partesNome.length > 1) ? partesNome[1] : "";
-        
-        PessoaModel pessoa = new PessoaModel(primeiroNome, sobrenome, cpfLeitor.getText());
-        adicionarPessoa(pessoa);
-        
-        
-        LeitorModel leitor = new LeitorModel(
-                primeiroNome,
-                sobrenome,
-                cpfLeitor.getText(),
-                telefone1Leitor.getText(),
-                telefone2Leitor.getText(),
-                bairroLeitor.getText(),
-                ruaLeitor.getText(),
-                cidadeLeitor.getText(),
-                Integer.parseInt(numeroLeitor.getText())
-        );
-        
-        adicionarLeitor(leitor);
-        leitoresController.atualizarTabela();
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.close();
-        Main.changeScreen("leitores");
-    }
-    
-    public void adicionarPessoa(PessoaModel pessoa){
-        try{
-            Conexao conSing = Conexao.getInstancy();
-            Connection conexao = conSing.getConexao();
-            String sql = "INSERT INTO Pessoa(pnome, sobrenome, cpf) VALUES (?,?,?)";
-            PreparedStatement preparedStatement = conexao.prepareStatement(sql);
-            preparedStatement.setString(1, pessoa.getPnome());
-            preparedStatement.setString(2, pessoa.getSobrenome());
-            preparedStatement.setString(3, pessoa.getCpf());
-            
-            preparedStatement.executeUpdate();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Deu errado: " + ex.getMessage());
-        }
+    LeitoresDAO leitoresDAO = new LeitoresDAO();
+
+    public void adicionarPessoa(String pnome, String sobrenome, String cpf) {
+        leitoresDAO.adicionarPessoa(pnome, sobrenome, cpf);
     }
 
-    public void adicionarLeitor(LeitorModel leitor) {
-        try {
-            Conexao conSing = Conexao.getInstancy();
-            Connection conexao = conSing.getConexao();
-
-            String sql = "INSERT INTO Leitor (telefone_um, telefone_dois, cpf, bairro, rua, cidade, numero) VALUES (?, ?, ?, ?, ?, ?, ?)";
-            PreparedStatement preparedStatement = conexao.prepareStatement(sql);
-            preparedStatement.setString(1, leitor.getTelefoneUm());
-            preparedStatement.setString(2, leitor.getTelefoneDois());
-            preparedStatement.setString(3, leitor.getCpf());
-            preparedStatement.setString(4, leitor.getBairro());
-            preparedStatement.setString(5, leitor.getRua());
-            preparedStatement.setString(6, leitor.getCidade());
-            preparedStatement.setInt(7, leitor.getNumero());
-
-            preparedStatement.executeUpdate();
-
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Deu errado: " + ex.getMessage());
-        }
+    public void adicionarLeitor(String telefoneUm, String telefoneDois, String cpf, String bairro, String rua,
+            String cidade, int numero) {
+        leitoresDAO.adicionarLeitor(telefoneUm, telefoneDois, cpf, bairro, rua, cidade, numero);
     }
 
-    public void btCancelarLeitor(ActionEvent e) {
-        Main.changeScreen("leitores");
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.close();
-    }
-  
 }

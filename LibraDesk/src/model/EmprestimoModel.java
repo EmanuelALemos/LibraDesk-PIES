@@ -1,6 +1,11 @@
 package model;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Date;
+
+import observer.IObservador;
+import observer.ISujeitoObservado;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -13,7 +18,7 @@ import java.util.Date;
  */
 import java.util.Date;
 
-public class EmprestimoModel {
+public class EmprestimoModel implements ISujeitoObservado {
     private String nomeLeitor;
     private Date dataEmprestimo;
     private Date dataPrevDev;
@@ -23,7 +28,9 @@ public class EmprestimoModel {
     private String nomeLivro;
     private int idLivro;
     private boolean status;
+    private boolean atrasado;
     private int idEmprestimo;
+    private ArrayList<IObservador> observadores;
 
     // Construtor
     public EmprestimoModel(String nomeLeitor, Date dataEmprestimo, Date dataPrevDev, Date dataRealDev, double multa, String cpfLeitor, String nomeLivro, int idLivro, boolean status, int idEmprestimo) {
@@ -37,6 +44,8 @@ public class EmprestimoModel {
         this.idLivro = idLivro;
         this.status = status;
         this.idEmprestimo = idEmprestimo;
+        this.atrasado = false;
+        this.observadores = new ArrayList<IObservador>();
     }
 
     // Getters
@@ -75,6 +84,10 @@ public class EmprestimoModel {
 
     public boolean isStatus() {
         return status;
+    }
+
+    public boolean isAtrasado() {
+        return atrasado;
     }
     
     public String getStatus(){
@@ -129,4 +142,28 @@ public class EmprestimoModel {
     public void setIdEmprestimo(int idEmprestimo){
         this.idEmprestimo = idEmprestimo;
     }
+
+    public void setAtrasado(boolean atrasado) {
+        this.atrasado = atrasado;
+    }
+
+    // Métodos do ISujeitoObservado
+    @Override
+    public void adicionarObservador(IObservador observador) {
+        observadores.add(observador);
+    }
+
+    @Override
+    public void removerObservador(IObservador observador) {
+        observadores.remove(observador);
+    }
+
+    @Override
+    public void notificarObservadores() {
+        for (IObservador observador : observadores) {
+            observador.atualizarStatus(this);
+        }
+    }
+
+    
 }

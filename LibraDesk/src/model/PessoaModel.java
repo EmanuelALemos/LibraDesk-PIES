@@ -8,7 +8,7 @@ package model;
  *
  * @author gabri
  */
-public class PessoaModel {
+public class PessoaModel implements IModel{
     private String pnome;
     private String sobrenome;
     private String cpf;
@@ -35,7 +35,9 @@ public class PessoaModel {
 
 
     public String getNomeCompleto() {
-        return pnome + " " + sobrenome;
+        if(sobrenome != null) return pnome + " " + sobrenome;
+        
+        return pnome;
     }
 
     // Métodos Setter

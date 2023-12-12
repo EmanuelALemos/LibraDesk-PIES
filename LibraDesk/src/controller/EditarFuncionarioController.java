@@ -1,7 +1,7 @@
-    /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+/*
+* Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+* Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
+*/
 package controller;
 
 import conexaoDAO.Conexao;
@@ -23,10 +23,10 @@ import model.LivroModel;
  *
  * @author arauj
  */
-public class EditarFuncionarioController {
-    protected void btCancelar(ActionEvent e){
+public class EditarFuncionarioController implements IController {
+    protected void btCancelar(ActionEvent e) throws Exception {
         Main.changeScreen("funcionarios");
-        //Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        //stage.close();
+        // Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        // stage.close();
     }
 }
