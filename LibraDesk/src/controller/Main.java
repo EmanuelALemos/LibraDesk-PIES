@@ -42,6 +42,8 @@ public class Main extends Application{
         invoker.register("novoEmprestimo", new NovoEmprestimoCommand());
         invoker.register("confirmarPopUp", new ConfirmarPopUpCommand());
         invoker.invoke("login");
+
+        primaryStage.setFullScreen(true);
         primaryStage.show();
     }
     
@@ -51,6 +53,7 @@ public class Main extends Application{
 
     public static void changeScene(Scene scene) {
         stage.setScene(scene);
+        stage.setFullScreen(true);
     }
     
     public static void main(String[] args ) {
